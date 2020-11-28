@@ -3,7 +3,7 @@
 #include <time.h>
 
 /**
-* main - Positive or negative
+* main - Positive or negative random 
 * Return: 0 for success
 */
 int main(void)
