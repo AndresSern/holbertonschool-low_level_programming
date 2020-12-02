@@ -3,30 +3,29 @@
 #include <time.h>
 
 /**
-* main - Greather and Less than 5 or 6
+* main - Greather and Less than 5 or 6, this is he last number of the "n"
 * Return: 0 for success
 */
 int main(void)
 {
-	int number_random;
-	int last_digit;
+	int n;
+	int last_di;
 
 	srand(time(0));
-	number_random = rand() - RAND_MAX / 2;
-	last_digit = number_random % 10;
+	n = rand() - RAND_MAX / 2;
+	last_di = n % 10;
 
-	if (last_digit > 5)
+	if (last_di > 5)
 	{
-		printf("Last digit of %d is %d and is greater than 5\n", number_random, last_digit);
+	printf("Last digit of %d is %d and is greater than 5\n", n, last_di);
 	}
-	else if (last_digit == 0)
+	else if (last_di == 0)
 	{
-		printf("Last digit of %d is %d and is 0\n", number_random, last_digit);
+	printf("Last digit of %d is %d and is 0\n", n, last_di);
 	}
 	else
 	{
-		printf("Last digit of %d is %d and is less than 6 and not 0\n", number_random, last_digit);
+	printf("Last digit of %d is %d and is less than 6 and not 0\n", n, last_di);
 	}
-
 	return (0);
 }
