@@ -3,11 +3,11 @@
 #include <time.h>
 
 /**
-*
 * main - Print Numbers Hexadecimal
 * Return: 0 for success
 *
-*/
+**/
+
 int main(void)
 {
 	char ch;

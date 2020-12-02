@@ -3,7 +3,7 @@
 #include <time.h>
 
 /**
-* main - Alphabet between "a" and "z", except "q" and "e" 
+* main - Alphabet between "a" and "z", except "q" and "e"
 * Return: 0 for success
 */
 int main(void)
