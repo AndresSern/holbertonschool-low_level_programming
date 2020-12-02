@@ -1,20 +1,21 @@
 #include "holberton.h"
 
 /**
- * print_alphabet_x10 - This function print alphabet x10
+ * print_alphabet_x10 - Print alphabet x10, in lowercase followed by a new line 
  *
  * Return: Always 0.
  */
 
 void print_alphabet_x10(void)
 {
-	int a, b;
+	int count;
+	char letter;
 
-	for (a = 0; a <= 9 ; a++)
+	for (count = 0; count <= 9 ; count++)
 	{
-		for (b = 97; b <= 122; b++)
+		for (letter = 'a'; letter <= 'z'; letter++)
 		{
-			_putchar(b);
+			_putchar(letter);
 		}
 	_putchar('\n');
 	}
