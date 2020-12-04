@@ -1,19 +1,20 @@
 #include "holberton.h"
 
 /**
- * _puts - Escribir un texto
+ * _puts - Write a function that prints a string, followed by a new line, to
+ * stdout.
  *
- * @str: This is my entry
+ * @str: This is my input string
  *
  */
 
 void _puts(char *str)
 {
-	int a;
+	int index;
 
-	for (a = 0; str[a] != '\0'; a++)
+	for (index = 0; str[index] != '\0'; index++)
 	{
-		_putchar(str[a]);
+		_putchar(str[index]);
 	}
 	_putchar('\n');
 }
