@@ -1,29 +1,30 @@
 #include "holberton.h"
 
 /**
- * cap_string - This is my function capatilize
- * @entry: This is my string
+ * cap_string - Write a function that capitalizes all words of a string.
  *
- * Return: This is my result
+ * @entry: This is the input string
+ *
+ * Return: String capitalized
  */
 char *cap_string(char *entry)
 {
-	int conversion, a, b;
+	int conversion, index, count;
 
 	char chars[] = {' ', ',', ';', '.', '!',
 			 '?', '"', '(', ')', '{', '}',  '\t', '\n', '\0'};
 	conversion = 32;
 
-	for (a = 0; entry[a] != '\0'; a++)
+	for (index = 0; entry[index] != '\0'; index++)
 	{
-		if (entry[a] >= 'a' && entry[a] <= 'z')
+		if (entry[index] >= 'index' && entry[index] <= 'z')
 		{
-			entry[a] =  entry[a] - conversion;
+			entry[index] =  entry[index] - conversion;
 		}
 		conversion = 0;
-		for (b = 0; chars[b] != '\0'; b++)
+		for (count = 0; chars[count] != '\0'; count++)
 		{
-			if (chars[b] == entry[a])
+			if (chars[count] == entry[index])
 			{
 				conversion = 32;
 				break;
