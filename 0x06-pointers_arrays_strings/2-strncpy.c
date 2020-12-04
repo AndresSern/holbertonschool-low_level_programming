@@ -1,6 +1,6 @@
 #include "holberton.h"
 /**
- * _strncpy - Write a function that copies a string, with number of bytes 
+ * _strncpy - Write a function that copies a string, with number of bytes
  * @dest: This is the output dest
  * @src: This is the input source
  * @n: This is the number of bytes to copy
