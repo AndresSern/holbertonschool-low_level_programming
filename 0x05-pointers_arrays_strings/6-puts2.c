@@ -1,4 +1,4 @@
-#include "holberton.h"
+ #include "holberton.h"
 
 /**
  * puts2 - This print every 2 casillas

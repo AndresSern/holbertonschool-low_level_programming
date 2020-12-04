@@ -1,27 +1,26 @@
 #include "holberton.h"
 /**
- *puts_half - prints every other number
+ *puts_half - function that prints half of a string, followed by a new line.
  *
- *@str: the string to print
+ *@str: This is the input string
  */
 void puts_half(char *str)
 {
-	int a, b;
+	int index, half;
 
-	a = 0;
+	index = 0;
+	while (str[index] != '\0')
+		index++;
 
-	while (str[a] != '\0')
-		a++;
+	half = index / 2;
 
-	b = a / 2;
+	if (index % 2 == 1)
+		half++;
 
-	if (a % 2 == 1)
-		b++;
-
-	while (b < a)
+	while (half < index)
 	{
-		_putchar(str[b]);
-		b++;
+		_putchar(str[half]);
+		half++;
 	}
 	_putchar('\n');
 }
