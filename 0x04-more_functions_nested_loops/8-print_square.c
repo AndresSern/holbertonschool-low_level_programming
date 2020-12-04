@@ -1,7 +1,7 @@
 #include "holberton.h"
 
 /**
- * print_square - tabla con el #
+ * print_square - Function that prints a square, followed by a new line.
  *
  * @n: Entry
  *
@@ -10,13 +10,13 @@
 
 void print_square(int n)
 {
-	int a, b;
+	int replay, count;
 
 	if (n > 0)
 	{
-		for (a = 1; a <= n; a++)
+		for (replay = 1; replay <= n; replay++)
 		{
-			for (b = 1; b <= n; b++)
+			for (count = 1; count <= n; count++)
 			{
 				_putchar(35);
 			}
