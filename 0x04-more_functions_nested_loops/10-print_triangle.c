@@ -1,20 +1,21 @@
 #include "holberton.h"
 
 /**
- * print_triangle - print a triangle
+ * print_triangle - Write a function that prints a triangle, followed by a new
+ * line.
  * @size: demensions of triangle
  * Return: nothing
  **/
 
 void print_triangle(int size)
 {
-	int i, j;
+	int replay, count;
 
-	for (i = 1; i <= size; i++)
+	for (replay = 1; replay <= size; replay++)
 	{
-		for (j = size - i; j > 0; j--)
+		for (count = size - replay; count > 0; count--)
 			_putchar(' ');
-		for (j = i; j > 0; j--)
+		for (count = replay; count > 0; count--)
 			_putchar('#');
 		_putchar('\n');
 	}

@@ -2,7 +2,8 @@
 #include <stdint.h>
 
 /**
- * main - Prints the prime number of
+ * main - Write a program that finds and prints the largest prime factor
+ * number 612852475143, followed by a new line.
  *
  *
  * Return: 0
@@ -10,16 +11,16 @@
  **/
 int main(void)
 {
-	int newValue, i;
+	int newValue, count;
 
 	long int number = 612852475143;
 
-	for (i = 2; i <= number; i++)
+	for (count = 2; count <= number; count++)
 	{
-		if (number % i == 0)
+		if (number % count == 0)
 		{
-			number = number / i;
-			newValue = i;
+			number = number / count;
+			newValue = count;
 		}
 	}
 	printf("%d\n", newValue);
