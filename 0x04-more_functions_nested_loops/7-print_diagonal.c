@@ -1,24 +1,24 @@
 #include "holberton.h"
 
 /**
- * print_diagonal - finished with a slac
+ * print_diagonal - function that draws a diagonal line on the terminal
  *
- * @n: this is the entry
+ * @n: this is the size of the diagonal
  *
  * Return: There is no error
  **/
 
 void print_diagonal(int n)
 {
-	int a, b;
+	int replay, count;
 
 	if (n > 0)
 	{
-		for (a = 1; a <= n; a++)
+		for (replay = 1; replay <= n; replay++)
 		{
-			for (b = 1; b <= a; b++)
+			for (count = 1; count <= replay; count++)
 			{
-				if (b == a)
+				if (count == replay)
 				{
 					_putchar(92);
 				}
