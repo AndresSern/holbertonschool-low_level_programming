@@ -6,13 +6,10 @@
  * @a: Number 1
  * @b: Number 2
  *
- * Return: result is C
+ * Return: Result between a * b
  **/
 
 int mul(int a, int b)
 {
-	int c;
-
-	c = a * b;
-	return (c);
+	return a * b;
 }
