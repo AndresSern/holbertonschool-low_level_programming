@@ -1,31 +1,31 @@
 #include "holberton.h"
 /**
- * rot13 - This is my funcion
- * @hi: This is my entry
+ * rot13 - Write a function that encodes a string using rot13.
  *
+ * @hi: This is my input string 
  *
- * Return: This is my result
+ * Return: String converted to rot13
  *
  */
 
 char *rot13(char *hi)
 {
-	int i, a;
+	int index, count;
 
 	char minus[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
 	char mayus[] = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
 
-	for (i = 0; hi[i] != '\0'; ++i)
+	for (index = 0; hi[index] != '\0'; ++index)
 	{
-		for (a = 0; minus[a] != '\0' ; a++)
+		for (count = 0; minus[count] != '\0' ; count++)
 		{
-			if (hi[i] == minus[a])
+			if (hi[index] == minus[count])
 			{
-				hi[i] = mayus[a];
+				hi[index] = mayus[count];
 				break;
 			}
 		}
 	}
-	hi[i] = '\0';
+	hi[index] = '\0';
 	return (hi);
 }

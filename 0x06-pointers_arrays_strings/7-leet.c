@@ -1,26 +1,27 @@
 #include "holberton.h"
 
 /**
- * leet -This is my function
- * @changed: This is my entry
+ * leet - Write a function that encodes a string into 1337
  *
- * Return: This is my return
+ * @changed: This is the input string
+ *
+ * Return: String converted to 1337
  */
 
 char *leet(char *changed)
 {
-	int i, a;
+	int index, j;
 	char minus[] = {'a', 'e', 'o', 't', 'l', '\0'};
 	char mayus[] = {'A', 'E', 'O', 'T', 'L', '\0'};
 	char numbers[] = {'4', '3', '0', '7', '1', '\0'};
 
-	for (i = 0; changed[i] != '\0'; ++i)
+	for (index = 0; changed[index] != '\0'; ++index)
 	{
-		for (a = 0; a < 5; a++)
+		for (j = 0; j < 5; j++)
 		{
-			if (changed[i] == minus[a] || changed[i] == mayus[a])
+			if (changed[index] == minus[j] || changed[index] == mayus[j])
 			{
-				changed[i] = numbers[a];
+				changed[index] = numbers[j];
 			}
 		}
 	}
