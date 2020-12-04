@@ -1,24 +1,24 @@
 #include "holberton.h"
 /**
- * _strncpy - This is my main
- * @dest: This is my dest
- * @src: This is my source
- * @n: This is my N
+ * _strncpy - Write a function that copies a string, with number of bytes 
+ * @dest: This is the output dest
+ * @src: This is the input source
+ * @n: This is the number of bytes to copy
  *
- *Return: THis is my return
+ *Return: Copied string with the number of bytes
  */
 
 char *_strncpy(char *dest, char *src, int n)
 {
-	int b;
+	int index;
 
-	for (b = 0; b < n && src[b] != '\0' ; b++)
+	for (index = 0; index < n && src[index] != '\0' ; index++)
 	{
-	dest[b] = src[b];
+		dest[index] = src[index];
 	}
-	for (; b  < n; b++)
+	for (; index  < n; index++)
 	{
-		dest[b] = '\0';
+		dest[index] = '\0';
 	}
 	return (dest);
 }
