@@ -1,9 +1,11 @@
 #include "holberton.h"
 /**
- * is_prime_number - This is my function and return 1 if is prime
+ * is_prime_number - Write a function that returns 1 if the input integer is a
+ * prime number, otherwise return 0.
+ *
  * @prime: Is my number prime
  *
- * Return: This is my return
+ * Return: 1 if the input integer is a prime number, otherwise return 0
  */
 
 int is_prime_number(int prime)

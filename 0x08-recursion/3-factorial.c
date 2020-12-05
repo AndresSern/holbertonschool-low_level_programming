@@ -1,10 +1,11 @@
 #include "holberton.h"
 
 /**
- * factorial - This is the fuction that give me
- * @n: This is my entry
+ * factorial - Write a function that returns the factorial of a given number.
  *
- * Return: This is the my return
+ * @n: This is the input number
+ *
+ * Return: The factorial of a given number
  */
 int factorial(int n)
 {

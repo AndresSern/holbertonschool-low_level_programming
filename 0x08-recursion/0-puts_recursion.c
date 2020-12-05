@@ -1,9 +1,9 @@
 #include "holberton.h"
 /**
- * _puts_recursion - This is my main and print character by character
- * @s: This is my string
+ * _puts_recursion - Write a function that prints a string, followed by a new
+ * line.
  *
- * Return: Nothing
+ * @s: This is the input string
  */
 
 void _puts_recursion(char *s)
