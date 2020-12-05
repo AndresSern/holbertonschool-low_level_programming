@@ -1,18 +1,19 @@
 #include <stdio.h>
 
 /**
- * main - This is my function show the name file
- * @argc: This is entries
- * @argv: This is my array
+ * main - Write a program that prints its name, followed by a new line.
+ * If you rename the program, it will print the new name, without having to
+ * compile it again
+ * You should not remove the path before the name of the program
+ *
+ * @argc: This is the argument count
+ * @argv: This is the argument vector
+ *
  * Return: This return to 0
  */
 int main(int argc, char *argv[])
 {
-	int i;
-
-	for (i = 0; i < argc; i++)
-	{
-	}
 	printf("%s\n", argv[0]);
+	(void)argc;
 	return (0);
 }
