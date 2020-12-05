@@ -1,22 +1,21 @@
 #include "holberton.h"
 #include <stdio.h>
 /**
- * print_chessboard - This is my funcion
- * @a: This is my variable
+ * print_chessboard - Write a function that prints the chessboard.
  *
- * Return: This is my return
+ * @a: This is my variable
  *
  */
 
 void print_chessboard(char (*a)[8])
 {
-	int c, b;
+	int count, index;
 
-	for (c = 0; c < 8; c++)
+	for (count = 0; count < 8; count++)
 	{
-		for (b = 0; b < 8; b++)
+		for (index = 0; index < 8; index++)
 		{
-			_putchar(a[c][b]);
+			_putchar(a[count][index]);
 		}
 		_putchar('\n');
 	}
