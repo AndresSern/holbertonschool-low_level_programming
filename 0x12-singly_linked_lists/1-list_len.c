@@ -1,8 +1,11 @@
 #include "lists.h"
 /**
- * list_len - This function return to the number of nodes
- * @h: This is my sigle list
- * Return: This return to the number of nodes
+ * list_len - function that returns the number of elements in a linked list_t
+ *            list.
+ *
+ * @h: This is the sigle list
+ *
+ * Return: The number of elements in a linked list_t list
  */
 size_t list_len(const list_t *h)
 {

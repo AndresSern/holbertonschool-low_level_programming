@@ -1,9 +1,13 @@
 #include "lists.h"
+
 /**
  * len - Calculates the length of a string.
+ *
  * @str: Constant string
+ *
  * Return: The length of the string
  */
+
 int len(const char *str)
 {
 	int count;
@@ -14,12 +18,16 @@ int len(const char *str)
 		;
 	return (count);
 }
+
 /**
- * add_node - Creates a node and adds it to a linked list
+ * add_node - function that adds a new node at the beginning of a list_t list.
+ *
  * @head: Pointer to head of the linked list
  * @str: String to assigned to the node
- * Return: Pointer to the head of the linked list
+ *
+ * Return: the address of the new element, or NULL if it failed
  */
+
 list_t *add_node(list_t **head, char *str)
 {
 	list_t *new_node = (list_t *) malloc(sizeof(list_t));

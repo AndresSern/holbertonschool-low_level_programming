@@ -1,9 +1,12 @@
 #include "lists.h"
 
 /**
- * print_list - This function prints the list of my single list
- * @h: This take the value of my single list
- * Return: THis return the number of nodes of my list
+ * print_list - function that prints all the elements of a list_t list.
+ *
+ * @h: This take the value of the single list
+ *
+ * Return: Return: the number of nodes
+ *         If str is NULL, print [0] (nil)
  */
 
 size_t print_list(const list_t *h)
