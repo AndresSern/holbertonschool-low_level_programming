@@ -1,12 +1,15 @@
 #include <stdarg.h>
 #include <stdio.h>
 #include "variadic_functions.h"
+
 /**
- * print_strings - Print every char of the argument
- * @separator: This is the separator como y espacio
- * @n: This is my entry
+ * print_strings -  function that prints strings, followed by a new line
+ *
+ * @separator: This is the input separator
+ * @n: This is the number of items
  *
  */
+
 void print_strings(const char *separator, const unsigned int n, ...)
 {
 	va_list ap;

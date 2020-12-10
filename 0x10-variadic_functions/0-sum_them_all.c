@@ -2,10 +2,12 @@
 #include <stdio.h>
 #include "variadic_functions.h"
 /**
- * sum_them_all - This function sum every value
- * @n: The numbers of entry
+ * sum_them_all - function that returns the sum of all its parameters.
  *
- * Return: This return o total of sum
+ * @n: The number of items
+ *
+ * Return: Returns the sum of all its parameters.
+ *         If n == 0, return 0
  */
 int sum_them_all(const unsigned int n, ...)
 {

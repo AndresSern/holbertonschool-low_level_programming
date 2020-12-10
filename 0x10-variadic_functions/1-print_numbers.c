@@ -2,9 +2,11 @@
 #include <stdio.h>
 #include "variadic_functions.h"
 /**
- * print_numbers - Print every number of the argument
- * @separator: This is the separator como y espacio
- * @n: This is my entry
+ * print_numbers - Function that prints numbers,
+ *                 followed by a new line.
+ *
+ * @separator: This is input separator
+ * @n: This is the input number
  *
  */
 void print_numbers(const char *separator, const unsigned int n, ...)

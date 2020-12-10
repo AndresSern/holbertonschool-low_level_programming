@@ -3,9 +3,9 @@
 #include "variadic_functions.h"
 #include <stdbool.h>
 /**
- * print_all - This function prints every value deppending the format
- * @format: This is the format to print a value
+ * print_all - Function that prints anything
  *
+ * @format: This is the format to print a value
  *
  */
 void print_all(const char * const format, ...)
@@ -46,4 +46,4 @@ void print_all(const char * const format, ...)
 	}
 	printf("\n");
 	va_end(vl);
-}
+::
