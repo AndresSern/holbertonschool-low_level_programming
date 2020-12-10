@@ -1,2 +1,0 @@
-# holbertonschool-low_level_programming1
-# holbertonschool-low_level_programming1
