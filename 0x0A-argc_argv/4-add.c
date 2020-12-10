@@ -4,9 +4,10 @@
 #include <string.h>
 
 /**
- * main - This is my funcion and show word by word
- * @argc: This is my entry
- * @argv: This is my another entry
+ * main - Program that adds positive numbers
+
+ * @argc: This is the argument count
+ * @argv: This is the argument vector
  *
  * Return: 0;
  */

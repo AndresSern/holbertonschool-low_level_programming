@@ -1,15 +1,15 @@
 #include <stdio.h>
 #include <stdlib.h>
 /**
- * main - This is my funcion and show word by word
- * @argc: This is my entry
- * @argv: This is my another entry
+ * main - Program that multiplies two numbers.
+ * @argc: This is the argument count
+ * @argv: This is the argument vector
  *
  * Return: 0;
  */
 int main(int argc, char *argv[])
 {
-	int a, multiplication;
+	int index, multiplication;
 
 	multiplication = 1;
 	if (argc < 3)
@@ -17,11 +17,10 @@ int main(int argc, char *argv[])
 		printf("Error\n");
 		return (1);
 	}
-	for (a = 1; a < argc; a++)
+	for (index = 1; index < argc; index++)
 	{
-		multiplication = multiplication * atoi(argv[a]);
+		multiplication = multiplication * atoi(argv[index]);
 	}
 	printf("%d\n", multiplication);
 	return (0);
 }
-

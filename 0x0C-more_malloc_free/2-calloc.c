@@ -3,10 +3,14 @@
 #include <stdlib.h>
 #include <string.h>
 /**
- * _calloc - This function is like calloc
- * @nmemb: This is my entry
- * @size: This is the size
- * Return: THis is the exit
+ * _calloc - function that allocates memory for an array, using malloc
+ *
+ * @nmemb: This is the length to allocate in the memory
+ * @size: This is the size of casting to save
+ *
+ * Return: Pointer to the allocated memory.
+ *         If nmemb or size is 0, then _calloc returns NULL
+ *         If malloc fails, then _calloc returns NULL
  */
 void *_calloc(unsigned int nmemb, unsigned int size)
 {

@@ -3,11 +3,13 @@
 #include "holberton.h"
 
 /**
- * create_array - This function inialiced with malloc
- * @size: This is the length of my array
- * @c: This is my char
+ * create_array - function that creates an array of chars, and initializes it
+ *                with a specific char.
  *
- * Return: This is  my array
+ * @size: This is the length of the array
+ * @c: This is the input character
+ *
+ * Return: An Array Initialized with the specific char
  */
 
 char *create_array(unsigned int size, char c)

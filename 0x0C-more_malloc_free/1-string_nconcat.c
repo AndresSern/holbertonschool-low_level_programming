@@ -2,12 +2,13 @@
 #include <stdio.h>
 #include <stdlib.h>
 /**
- * string_nconcat - Join two string
- * @s1: This is my first string
- * @s2: This is my second string
+ * string_nconcat - function that concatenates two strings.
  *
- * @n: This is my limit
- * Return: This is string join
+ * @s1: This is the first input string
+ * @s2: This is the second input string
+ * @n: This is the limit to copy the second string to the first string
+ *
+ * Return: This is the string joined
  */
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {

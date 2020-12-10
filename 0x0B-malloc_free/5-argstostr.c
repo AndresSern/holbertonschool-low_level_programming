@@ -20,11 +20,12 @@ char *_strcat(char *dest, char *src)
         }
         return (dest);
 }
+
 /**
  * _strlen - Return the number of the length of the string
  *
- *
  * @s: This is the string to check
+ *
  * Return: Return the length of the string
  */
 int _strlen(char *s)
@@ -35,10 +36,13 @@ int _strlen(char *s)
 		;
 	return (a);
 }
+
 /**
  * argstostr - Concats argv to new string
+ *
  * @ac: Argument count
  * @av: Arguments
+ *
  * Return: Returns a pointer to a new string, or NULL if it fails
  */
 
