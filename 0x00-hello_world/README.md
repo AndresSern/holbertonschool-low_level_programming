@@ -1,0 +1,1 @@
+This directory is about C, here we are going to learn about how to use C 
