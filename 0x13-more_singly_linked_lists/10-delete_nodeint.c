@@ -1,6 +1,6 @@
 #include "lists.h"
 /**
-  * delete_nodeint_at_index - Function that deletes the node at inde of 
+  * delete_nodeint_at_index - Function that deletes the node at inde of
   * a listint_t linked list.
   *
   * @head: This is the input list linked
