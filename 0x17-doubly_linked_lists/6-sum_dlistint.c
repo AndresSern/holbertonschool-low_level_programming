@@ -6,7 +6,7 @@
  *
  * @head: This is the input double linked list
  *
- * Return: Return of the total of the sum each position if if the list is 
+ * Return: Return of the total of the sum each position if if the list is
  * empty, return 0
  *
  */
