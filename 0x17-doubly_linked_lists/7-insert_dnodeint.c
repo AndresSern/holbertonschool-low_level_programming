@@ -36,7 +36,7 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 }
 dlistint_t *comprobacion(dlistint_t **h, int idx, dlistint_t *new_node)
 {
-	int count = 0
+	int count = 0;
 	dlistint_t *current_node = *h;
 
 	for (; count < idx - 1; count++)
