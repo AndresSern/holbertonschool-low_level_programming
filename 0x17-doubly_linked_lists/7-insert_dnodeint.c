@@ -1,17 +1,5 @@
 #include "lists.h"
 
-/**
-  * insert_dnodeint_at_index - Function that inserts a new node at a
-  * given position.
-  *
-  * @h: This the input double list linked
-  * @idx: index of the list whete the new node should be added
-  * @n: integer to add to the structure
-  *
-  * Return: The address of the new node, or NULL if it failed
-  *         If it is not possible to add the new node at index idx, do not
-  *         add the new node and return NULL
-**/
 dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 {
         /*unsigned int count = 0;*/
@@ -40,10 +28,9 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
                         current_node->prev = new_node;
                 return (new_node);
         }
-        for (; count <= idx + 1; count++)
+        for (; count < idx + 1; count++)
         {
-                /*current_node = current_node->next;*/
-                if (current_node == NULL && idx - count > 0)
+        	if (current_node == NULL && idx == idx + 1)
                 {
                         free(new_node);
                         return (NULL);
@@ -54,9 +41,13 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
                         new_node->next = current_node->next;
                         current_node->next = new_node;
                 }
-                if (count == idx + 1)
+                if (count == idx + 2)
+		{
                         current_node->prev = new_node;
-                current_node = current_node->next;
+			return new_node;
+		}
+		current_node = current_node->next;
+		
         }
         return (new_node);
 }

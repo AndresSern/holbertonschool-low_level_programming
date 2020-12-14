@@ -69,6 +69,7 @@ dlistint_t *check(dlistint_t **h, int idx, dlistint_t *new_node)
 		current_node = current_node->next;
 		if (current_node == NULL && idx - count > 0)
 		{
+			printf("Idx == %d---count == %d\n", idx, count);
 			free(new_node);
 			return (NULL);
 		}
