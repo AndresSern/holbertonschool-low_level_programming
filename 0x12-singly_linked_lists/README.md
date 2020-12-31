@@ -4,8 +4,8 @@ In this directory you will learn how to use singly linked lists
 
 ## GENERAL:
 
-1.  When and why using linked lists vs arrays
-2.  How to build and use linked lists
+1.  **When and why using linked lists vs arrays**
+2.  **How to build and use linked lists**
 
 
 ## Read or watch:
