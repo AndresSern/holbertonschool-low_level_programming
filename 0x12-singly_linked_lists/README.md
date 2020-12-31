@@ -1,4 +1,4 @@
-# 0x0B. C - malloc, free
+# 0x12. SINGLY LINKED LISTS
 
 In this directory you will learn how to use singly linked lists
 
