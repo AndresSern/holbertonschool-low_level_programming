@@ -13,7 +13,7 @@
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
 	unsigned long int index = 0;
-	int returnAdd = 0;
+	int returAdd = 0;
 
 	if (key == NULL || ht == NULL)
 		return (0);
