@@ -35,23 +35,20 @@ int add_node(hash_node_t **head, char *key, char *value)
 		(*head) = new_node;
 		return (1);
 	}
-	else if (*head != NULL)
+	while(aux != NULL)
 	{
-		while(aux != NULL)
+		if(strcmp(aux->key, key) == 0)
 		{
-			if(strcmp(aux->key, key) == 0)
-			{
-				free(aux->value);
-				aux->value = strdup(value);
-				free(new_node);
-				return (1);
-			}
-			aux = aux->next;
+			free(aux->value);
+			aux->value = strdup(value);
+			free(new_node);
+			return (1);
 		}
-		new_node->key = strdup(key);
-	    	new_node->value = strdup(value);
-		new_node->next = (*head);
-		(*head) = new_node;
+		aux = aux->next;
 	}
+	new_node->key = strdup(key);
+	new_node->value = strdup(value);
+	new_node->next = (*head);
+	(*head) = new_node;
 	return (1);
 }
