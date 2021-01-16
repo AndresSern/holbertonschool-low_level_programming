@@ -25,16 +25,10 @@ int add_node(hash_node_t **head, char *key, char *value)
 {
 	hash_node_t *new_node = (hash_node_t *) malloc (sizeof(hash_node_t));
 	hash_node_t *aux = (*head);
+
 	if (new_node == NULL)
 		return (0);
-	if(*head == NULL)
-	{
-		new_node->key = strdup(key);
-	    	new_node->value = strdup(value);
-		new_node->next = NULL;
-		(*head) = new_node;
-		return (1);
-	}
+
 	while(aux != NULL)
 	{
 		if(strcmp(aux->key, key) == 0)
