@@ -2,17 +2,13 @@
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
 	unsigned long int index = 0;
-	hash_node_t *current = NULL;
 	int returnAdd = 0;
-	if (key == NULL)
+	if (key == NULL || ht == NULL)
 		return 0;
 	index = key_index((unsigned char*)key, ht->size);
-	current = ht->array[index];
-	/*ht->array[index] = add_node(&(ht)->array[index],(char *) key,(char *) value); */
 	returnAdd = add_node(&(ht)->array[index], (char *) key,(char *) value);
 	if (returnAdd == 1)
 		return 1;
-	(void)current;
 	return 0;
 }
 
