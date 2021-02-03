@@ -8,23 +8,22 @@
 */
 int main(void)
 {
-	int number_random;
+	int n;
 
 	srand(time(0));
-	number_random = rand() - RAND_MAX / 2;
+	n = rand() - RAND_MAX / 2;
 
-	if (number_random > 0)
+	if (n > 0)
 	{
-		printf("%d is positive\n", number_random);
+		printf("%d is positive\n", n);
 	}
-	if (number_random == 0)
+	if (n == 0)
 	{
-		printf("%d is zero\n", number_random);
+		printf("%d is zero\n", n);
 	}
-	if (number_random < 0)
+	if (n < 0)
 	{
-		printf("%d is negative\n", number_random);
+		printf("%d is negative\n", n);
 	}
-
 	return (0);
 }
