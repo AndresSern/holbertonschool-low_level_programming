@@ -17,11 +17,11 @@ int main(void)
 	{
 		printf("%d is positive\n", number_random);
 	}
-	if (number_random == 0)
+	else if (number_random == 0)
 	{
 		printf("%d is zero\n", number_random);
 	}
-	if (number_random < 0)
+	else if (number_random < 0)
 	{
 		printf("%d is negative\n", number_random);
 	}
