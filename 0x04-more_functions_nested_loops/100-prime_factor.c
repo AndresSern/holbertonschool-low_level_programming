@@ -12,7 +12,6 @@
 int main(void)
 {
 	int newValue, count;
-
 	long int number = 612852475143;
 
 	for (count = 2; count <= number; count++)

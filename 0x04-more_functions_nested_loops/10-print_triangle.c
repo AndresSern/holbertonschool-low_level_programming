@@ -10,6 +10,7 @@
 void print_triangle(int size)
 {
 	int replay, count;
+
 	if (size < 1)
 	{
 		_putchar('\n');
