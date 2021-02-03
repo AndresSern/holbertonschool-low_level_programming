@@ -1,5 +1,5 @@
 #include "holberton.h"
-
+#include <stdio.h>
 /**
  * rev_string - This fuction print a string reverser
  *
@@ -16,7 +16,7 @@ void rev_string(char *s)
 	{
 		end++;
 	}
-	len = a;
+	len = a + 1;
 	begin = s;
 	for (a = 0; a < len / 2; a++)
 	{
