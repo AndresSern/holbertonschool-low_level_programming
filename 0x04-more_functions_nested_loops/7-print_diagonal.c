@@ -12,11 +12,9 @@ void print_diagonal(int n)
 {
 	int replay, count;
 
-	if (n > 0)
-	{
-		for (replay = 1; replay <= n; replay++)
+	for (replay = 1; n > 0 && replay <= n; replay++)
 		{
-			for (count = 1; count <= replay; count++)
+		for (count = 1; count <= replay; count++)
 			{
 				if (count == replay)
 				{
@@ -29,9 +27,5 @@ void print_diagonal(int n)
 			}
 		_putchar('\n');
 		}
-	}
-	else
-	{
-		_putchar('\n');
-	}
+	_putchar('\n');
 }
