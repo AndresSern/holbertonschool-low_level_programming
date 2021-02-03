@@ -13,20 +13,20 @@ void print_diagonal(int n)
 	int replay, count;
 
 	for (replay = 1; n > 0 && replay <= n; replay++)
-		{
+	{
 		for (count = 1; count <= replay; count++)
+		{
+			if (count == replay)
 			{
-				if (count == replay)
-				{
-					_putchar(92);
-				}
-				else
-				{
-					_putchar(32);
-				}
+				_putchar(92);
 			}
-		_putchar('\n');
+			else
+			{
+				_putchar(32);
+			}
 		}
-	if(n <= 0)
+		_putchar('\n');
+	}
+	if (n <= 0)
 		_putchar('\n');
 }
