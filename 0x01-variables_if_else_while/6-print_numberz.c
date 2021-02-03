@@ -4,6 +4,7 @@
 
 /**
 * main - Print number from 0 to 9 without using char
+*
 * Return: 0 for success
 */
 int main(void)
