@@ -7,8 +7,6 @@
  *
  * Return: Lowercase changed to uppercase of the string
  */
-
-
 char *string_toupper(char *hi)
 {
 	int index = 0;

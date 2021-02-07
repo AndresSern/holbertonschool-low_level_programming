@@ -2,6 +2,7 @@
 
 /**
  *_strcat - Write a function that concatenates two strings.
+ *
  *@dest: This is the output dest
  *@src: This is the input source
  *
@@ -16,8 +17,8 @@ char *_strcat(char *dest, char *src)
 		;
 	for (j = 0; src[j] != '\0'; j++)
 	{
-	dest[i] = src[j];
-	i++;
+		dest[i] = src[j];
+		i++;
 	}
 	return (dest);
 }

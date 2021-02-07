@@ -1,5 +1,4 @@
 #include <stdio.h>
-
 /**
  * main - Write a program that prints all arguments it receives
  *        All arguments should be printed, including the first on
