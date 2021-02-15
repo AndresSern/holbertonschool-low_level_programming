@@ -14,15 +14,15 @@ In this directory you will learn how to use pointers, arrays and strings and ¿W
 
 ## Read or watch:
 
-1.  Pointers and arrays: **https://intranet.hbtn.io/concepts/60**
-2.  Data Structures: **https://intranet.hbtn.io/concepts/120**
-3.  C - Arrays: **https://www.tutorialspoint.com/cprogramming/c_arrays.htm** 
-4.  C - Pointers: **https://www.tutorialspoint.com/cprogramming/c_pointers.htm**
-5.  C - Strings: **https://www.tutorialspoint.com/cprogramming/c_strings.htm**
-6.  C - Pointer to Pointer: **https://www.tutorialspoint.com/cprogramming/c_pointer_to_pointer.htm**
-7.  C – Pointer to Pointer with example : **https://beginnersbook.com/2014/01/c-pointer-to-pointer/**
-8.  Multi-dimensional Arrays in C : **https://www.tutorialspoint.com/cprogramming/c_multi_dimensional_arrays.htm**
-9.  Two dimensional (2D) arrays in C programming with example: **https://beginnersbook.com/2014/01/2d-arrays-in-c-example/**
+1.  **[Pointers and arrays:](https://intranet.hbtn.io/concepts/60)**
+2.  **[Data Structures:](https://intranet.hbtn.io/concepts/120)**
+3.  **[C - Arrays:](https://www.tutorialspoint.com/cprogramming/c_arrays.htm)** 
+4.  **[C - Pointers:](https://www.tutorialspoint.com/cprogramming/c_pointers.htm)**
+5.  **[C - Strings:](https://www.tutorialspoint.com/cprogramming/c_strings.htm)**
+6.  **[C - Pointer to Pointer:](https://www.tutorialspoint.com/cprogramming/c_pointer_to_pointer.htm)**
+7.  **[C – Pointer to Pointer with example:](https://beginnersbook.com/2014/01/c-pointer-to-pointer/)**
+8.  **[Multi-dimensional Arrays in C:](https://www.tutorialspoint.com/cprogramming/c_multi_dimensional_arrays.htm)**
+9.  **[Two dimensional (2D) arrays in C programming with example:](https://beginnersbook.com/2014/01/2d-arrays-in-c-example/)**
 
 ## Files:
 

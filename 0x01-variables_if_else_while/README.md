@@ -1,4 +1,4 @@
-# 0X01 VARIABLES IF ELSE AND WHILE
+i 0X01 VARIABLES IF ELSE AND WHILE
 In this directory you will learn how to use conditional if, and the while and for loop and differentiate each one
 
 ```
@@ -7,16 +7,16 @@ gcc -Wall -pedantic -Werror -Wextra file_name -o output_file_name
 
 ## Read or watch:
 
-*   Everything you need to know to start with C  **https://docs.google.com/presentation/d/1ghto-TsXqgPRuEVmiCp7GvGttobdTLF4Yq8IRXwzvHY/edit#slide=id.p**
-*   Keywords and identifiers **https://publications.gbdirect.co.uk//c_book/chapter2/keywords_and_identifiers.html**
-*   integers **https://publications.gbdirect.co.uk//c_book/chapter2/integral_types.html**
-*   Arithmetic Operators in C **https://www.tutorialspoint.com/cprogramming/c_arithmetic_operators.htm**
-*   If statements in C **https://www.cprogramming.com/tutorial/c/lesson2.html**
-*   if…else statement **https://www.tutorialspoint.com/cprogramming/if_else_statement_in_c.htm**
-*   Relational operators **https://www.tutorialspoint.com/cprogramming/c_relational_operators.htm**
-*   Logical operators **https://fresh2refresh.com/c-programming/c-operators-expressions/c-logical-operators/**
-*   while loop in C **https://www.youtube.com/watch?v=Ju1LYO9pkaI**
-*   While loop **https://www.tutorialspoint.com/cprogramming/c_while_loop.htm**
+*   **[Everything you need to know to start with C](https://docs.google.com/presentation/d/1ghto-TsXqgPRuEVmiCp7GvGttobdTLF4Yq8IRXwzvHY/edit#slide=id.p)**
+*   **[Keywords and identifiers](https://publications.gbdirect.co.uk//c_book/chapter2/keywords_and_identifiers.html)**
+*   **[integers](https://publications.gbdirect.co.uk//c_book/chapter2/integral_types.html)**
+*   **[Arithmetic Operators in C)(https://www.tutorialspoint.com/cprogramming/c_arithmetic_operators.htm)**
+*   **[If statements in C](https://www.cprogramming.com/tutorial/c/lesson2.html)**
+*   **[if…else statement](https://www.tutorialspoint.com/cprogramming/if_else_statement_in_c.htm)**
+*   **[Relational operators](https://www.tutorialspoint.com/cprogramming/c_relational_operators.htm)**
+*   **[Logical operators](https://fresh2refresh.com/c-programming/c-operators-expressions/c-logical-operators/)**
+*   **[while loop in C](https://www.youtube.com/watch?v=Ju1LYO9pkaI)**
+*   **[While loop](https://www.tutorialspoint.com/cprogramming/c_while_loop.htm)**
 
 ## Files:
 
@@ -70,8 +70,7 @@ julien@ubuntu:~/0x01$ ./0-positive_or_negative
   the last digit of the number stored in the variable n.*
 
 1.  The variable n will store a different value every time you run this program
-2.  You don’t have to understand what rand, srand, and RAND\_MAX do. Please do not touch this code
-3.  The output of the program should be:
+2.  The output of the program should be:
      - The string Last digit of, followed by 
      - N, followed by
      - The string is, followed by

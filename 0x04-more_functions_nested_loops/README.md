@@ -14,11 +14,11 @@ In this directory you will see more functions and more nested loops
 
 ## Read or watch:
 
-1.  Nested while loops: **https://www.youtube.com/watch?v=Z3iGeQ1gIss**
-2.  C - Functions: **https://www.tutorialspoint.com/cprogramming/c_functions.htm**
-3.  Learning to Program in C (Part 06) (stop at 14:00): **https://www.youtube.com/watch?v=qMlnFwYdqIw**
-4.  What is the purpose of a function prototype?: **https://www.geeksforgeeks.org/what-is-the-purpose-of-a-function-prototype/**
-5.  C - Header Files (stop before the “Once-Only Headers” paragraph): **https://www.tutorialspoint.com/cprogramming/c_header_files.htm**
+1.  **[Nested while loops:](https://www.youtube.com/watch?v=Z3iGeQ1gIss)**
+2.  **[C - Functions:](https://www.tutorialspoint.com/cprogramming/c_functions.htm)**
+3.  **[Learning to Program in C (Part 06) (stop at 14:00):](https://www.youtube.com/watch?v=qMlnFwYdqIw)**
+4.  **[What is the purpose of a function prototype?:](https://www.geeksforgeeks.org/what-is-the-purpose-of-a-function-prototype/)**
+5.  **[C - Header Files (stop before the “Once-Only Headers” paragraph):](https://www.tutorialspoint.com/cprogramming/c_header_files.htm)**
 
 ## Files:
 

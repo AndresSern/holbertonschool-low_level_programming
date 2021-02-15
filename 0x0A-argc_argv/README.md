@@ -9,10 +9,10 @@ In this directory you will learn how to use argc and argv in the function main
 
 ## Read or watch:
 
-1.    Arguments to main: **https://publications.gbdirect.co.uk//c_book/chapter10/arguments_to_main.html**
-2.    argc and argv: **http://crasseux.com/books/ctutorial/argc-and-argv.html**
-3.    What does argc and argv mean?: **https://www.youtube.com/watch?v=aP1ijjeZc24** 
-4.    how to compile with unused variables: **https://www.google.com/webhp?q=unused+variable+C**
+1.    **[Arguments to main:](https://publications.gbdirect.co.uk//c_book/chapter10/arguments_to_main.html)**
+2.    **[argc and argv:](http://crasseux.com/books/ctutorial/argc-and-argv.html)**
+3.    **[What does argc and argv mean?:](https://www.youtube.com/watch?v=aP1ijjeZc24)** 
+4.    **[how to compile with unused variables:](https://www.google.com/webhp?q=unused+variable+C)**
 
 
 ## Files:

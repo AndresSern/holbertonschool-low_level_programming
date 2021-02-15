@@ -12,11 +12,11 @@ In this directory you will learn how to use pointers, arrays and strings and ¿W
 
 ## Read or watch:
 
-1.    Pointers and arrays: **https://intranet.hbtn.io/concepts/60**
-2.    Data Structures: **https://intranet.hbtn.io/concepts/120**
-3.    C - Arrays: **https://www.tutorialspoint.com/cprogramming/c_arrays.htm** 
-4.    C - Pointers: **https://www.tutorialspoint.com/cprogramming/c_pointers.htm**
-5.    C - Strings: **https://www.tutorialspoint.com/cprogramming/c_strings.htm**
+1.    **[Pointers and arrays:](https://intranet.hbtn.io/concepts/60)**
+2.    **[Data Structures:](https://intranet.hbtn.io/concepts/120)**
+3.    **[C - Arrays:](https://www.tutorialspoint.com/cprogramming/c_arrays.htm)** 
+4.    **[C - Pointers:](https://www.tutorialspoint.com/cprogramming/c_pointers.htm)**
+5.    **[C - Strings:](https://www.tutorialspoint.com/cprogramming/c_strings.htm)**
 
 ## Files:
 

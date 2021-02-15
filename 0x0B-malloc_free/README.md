@@ -12,7 +12,7 @@ In this directory you will learn how to use malloc and free
 ## Read or watch:
 
 1.    **[0x0a - malloc & free - quick overview](https://docs.google.com/presentation/d/1awucWwPvD8BU783JVqzDXeSerU7eB504M6xRKKZndAI/edit#slide=id.p)**
-2.    **[Dynamic memory allocation in C - malloc calloc realloc free (stop at 6:50)](https://www.youtube.com/watch?v=xDVC3wKjS64)**
+2.    **[Dynamic memory allocation in C malloc calloc realloc free (stop at 6:50)](https://www.youtube.com/watch?v=xDVC3wKjS64)]**
 
 ## Files:
 
