@@ -1,7 +1,5 @@
-#The objective is compiler the program called holberton.c with variables
+#The objective is compiler the program called holberton.c with variables 
 CC=gcc
 SRC=$(wildcard *.c)
-all: holberton
-
-holberton: $(SRC)
+all:
 	$(CC) $(SRC) -o holberton
