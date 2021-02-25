@@ -1,222 +1,54 @@
-# 0x00. Python - Hello, World
-In this directory you will learn how to use conditional if, and the while and for loop and differentiate each one
+# Low Level Programming
 
-## GENERAL:
-1.      
-2.    
-3.    
-4.    
-5.    
-6.    
-7.    
-8.    
-9.    
-10.    
+## Introduction 
 
+<br/>
 
-## Read or watch:
+## Description About the Directories 
 
-1.    : ****
-2.    : ****
-3.    : **** 
-4.    : ****
-5.    : ****
-6.    : ****
-7.    : ****
-
-## Files:
-
-1.  ****
-2.  ****
-3.  ****
-4.  ****
-5.  ****
-6.  ****
-7.  ****
-8.  ****
-9.  ****
-10.  ****
-11.  ****
+| DIRECTORY | DESCRIPCION | README |
+| :--- | :--- | :--- |
+|  [0x00-hello_world](https://github.com/AndresSern/holbertonschool-low_level_programming/tree/main/0x00-hello_world)|      |  [README.md](https://github.com/AndresSern/holbertonschool-low_level_programming/blob/main/0x00-hello_world/README.md)|
+|  [0x01-variables_if_else_while](https://github.com/AndresSern/holbertonschool-low_level_programming/tree/main/0x01-variables_if_else_while)|      |  [README.md](https://github.com/AndresSern/holbertonschool-low_level_programming/blob/main/0x01-variables_if_else_while/README.md)|
+|  [0x02-functions_nested_loops](https://github.com/AndresSern/holbertonschool-low_level_programming/tree/main/0x02-functions_nested_loops)|      |  [README.md](https://github.com/AndresSern/holbertonschool-low_level_programming/blob/main/0x02-functions_nested_loops/README.md)|
+|  [0x03-debugging](https://github.com/AndresSern/holbertonschool-low_level_programming/tree/main/0x03-debugging) |  [README.md](https://github.com/AndresSern/holbertonschool-low_level_programming/blob/main/0x03-debugging/README.md)|
+|  [0x04-more_functions_nested_loops](https://github.com/AndresSern/holbertonschool-low_level_programming/tree/main/0x04-more_functions_nested_loops)|      |  [README.md]()|
+|  [0x04-more_functions_nested_loops](https://github.com/AndresSern/holbertonschool-low_level_programming/tree/main/0x04-more_functions_nested_loops)|      |  [README.md](https://github.com/AndresSern/holbertonschool-low_level_programming/blob/main/README.md)|
+|  [0x05-pointers_arrays_strings/README.md)](https://github.com/AndresSern/holbertonschool-low_level_programming/tree/main/0x05-pointers_arrays_strings)|      |  [README.md](https://github.com/AndresSern/holbertonschool-low_level_programming/blob/main/0x05-pointers_arrays_strings/README.md)|
+|  []()|      |  [README.md]()|
+|  []()|      |  [README.md]()|
+|  []()|      |  [README.md]()|
+|  []()|      |  [README.md]()|
+|  []()|      |  [README.md]()|
 
 
-## Tasks
+## Installation  and Prerequisites
 
-### 0\.
-*   File: ****
+### Prerequisites
 
-**
-
-1.    
-2.    
-3.    
-4.    
-5.    
-6.    
-
-Example:
+What things you need to install
+- **Ubuntu 14.04 LTS** on a Vagrant (Virtualbox) enviroment 
+- **Ruby 2.7.1** or less to run files ruby 
+- **shellcheck** to check the style to files bash
+- **Git** to clone the repository
 
 ```
+Give examples
+```
+### Installation
+In your terminal, git clone the directory with the following command:
 
+```sh
+git clone https://github.com/AndresSern/holberton-system_engineering-devops.git/
+```
+## Usage 
+
+```sh
+./[executable file]
 ```
 
-### 1. 
-*   File: ****
+## Environment
 
-**
-
-1.    
-2.    
-3.    
-4.    
-5.    
-6.    
-
-```
-
-```
-
-###  2. 
-*   File: ****
-
-**
-
-1.    
-2.    
-3.    
-4.    
-5.    
-6.    
-
-```
-
-```
-
-###  3. 
-*   File: ****
-
-**
-
-1.  
-2.  
-     - 
-     - 
-3.  
-4.  
-5.  
-
-```
-
-```
-
-###  4. 
-*   File: ****
-
-**
-
-1.  
-2.  
-     - 
-     - 
-3.  
-4.  
-
-```
-
-```
-
-###   5. 
-* File: ****
-**
-
-1.  
-2.  
-     - 
-     - 
-     - 
-     - 
-3.  
-4.  
-
-```
-
-```
-
-### 6. 
-*   File: ****
-
-**
-
-1.    
-2.    
-3.    
-4.    
-5.    
-6.    
-
-```
-
-```
-
-
-### 7. 
-*   File: **** 
-
-**
-
-1.  
-2.  
-3.  
-4.  
-5.  
-6.  
-
-```
-
-```
-
-### 8. 
-*   File: ****
-
-**
-
-1.    
-2.    
-3.    
-4.    
-5.    
-6.      
-
-```
-
-```
-
-###  9.  
-*   File: ****
-
-**
-
-1.    
-2.    
-3.    
-4.    
-5.    
-6.    
-
-```
-
-```
-
-### 10. 
-*   File: ****
-
-** 
-1.    
-2.    
-3.    
-4.    
-5.    
-6.    
-
-```
-
-```
+- Language: Ruby 3.0 script, Bash script  
+- OS: Ubuntu 14.04 LTS
+- Style guidelines: shellcheck to check if the style in files bash is correct
