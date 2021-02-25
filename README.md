@@ -11,9 +11,8 @@
 |  [0x00-hello_world](https://github.com/AndresSern/holbertonschool-low_level_programming/tree/main/0x00-hello_world)|      |  [README.md](https://github.com/AndresSern/holbertonschool-low_level_programming/blob/main/0x00-hello_world/README.md)|
 |  [0x01-variables_if_else_while](https://github.com/AndresSern/holbertonschool-low_level_programming/tree/main/0x01-variables_if_else_while)|      |  [README.md](https://github.com/AndresSern/holbertonschool-low_level_programming/blob/main/0x01-variables_if_else_while/README.md)|
 |  [0x02-functions_nested_loops](https://github.com/AndresSern/holbertonschool-low_level_programming/tree/main/0x02-functions_nested_loops)|      |  [README.md](https://github.com/AndresSern/holbertonschool-low_level_programming/blob/main/0x02-functions_nested_loops/README.md)|
-|  [0x03-debugging](https://github.com/AndresSern/holbertonschool-low_level_programming/tree/main/0x03-debugging) |  [README.md](https://github.com/AndresSern/holbertonschool-low_level_programming/blob/main/0x03-debugging/README.md)|
+|  [0x03-debugging](https://github.com/AndresSern/holbertonschool-low_level_programming/tree/main/0x03-debugging) |   | [README.md](https://github.com/AndresSern/holbertonschool-low_level_programming/blob/main/0x03-debugging/README.md)|
 |  [0x04-more_functions_nested_loops](https://github.com/AndresSern/holbertonschool-low_level_programming/tree/main/0x04-more_functions_nested_loops)|      |  [README.md]()|
-|  [0x04-more_functions_nested_loops](https://github.com/AndresSern/holbertonschool-low_level_programming/tree/main/0x04-more_functions_nested_loops)|      |  [README.md](https://github.com/AndresSern/holbertonschool-low_level_programming/blob/main/README.md)|
 |  [0x05-pointers_arrays_strings/README.md)](https://github.com/AndresSern/holbertonschool-low_level_programming/tree/main/0x05-pointers_arrays_strings)|      |  [README.md](https://github.com/AndresSern/holbertonschool-low_level_programming/blob/main/0x05-pointers_arrays_strings/README.md)|
 |  []()|      |  [README.md]()|
 |  []()|      |  [README.md]()|
