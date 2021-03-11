@@ -1,6 +1,15 @@
 #include "holberton.h"
 
-int check_is_palindrome(char *s, int minimum, int high);
+int check_is_palindrome(char *s, int minimum, int high)
+{
+	if (minimum == high)
+		return (1);
+	if (s[minimum] != s[high])
+		return (0);
+	if (minimum < high + 1)
+		return (check_is_palindrome(s, minimum + 1, high - 1));
+	return (1);
+}
 
 /**
  * is_palindrome
@@ -20,13 +29,3 @@ int is_palindrome(char *s)
 	return (check_is_palindrome(s, 0, len - 1));
 }
 
-int check_is_palindrome(char *s, int minimum, int high)
-{
-	if (minimum == high)
-		return (1);
-	if (s[minimum] != s[high])
-		return (0);
-	if (minimum < high + 1)
-		return (check_is_palindrome(s, minimum + 1, high - 1));
-	return (1);
-}
