@@ -16,14 +16,14 @@
 
 ## INTRODUCTION TO FILES :closed_book::closed_book::closed_book::
 
-0.	[** 0-print_dlistint.c**:](# 0-print_dlistintc) Function that prints all the elements of a <code>dlistint_t</code> list.
+0.	[**0-print_dlistint.c**:](#0-print_dlistintc) Function that prints all the elements of a <code>dlistint_t</code> list.
 1.	[**1-dlistint_len.c**:](#1-dlistint_lenc) Function that returns the number of elements in a linked <code>dlistint_t</code> list.
 2.	[**2-add_dnodeint.c**:](#2-add_dnodeintc) Function that adds a new node at the beginning of a <code>dlistint_t</code> list.
 3.	[**3-add_dnodeint_end.c**:](#3-add_dnodeint_endc) Function that adds a new node at the end of a <code>dlistint_t</code> list.
 4.	[**4-free_dlistint.c**:](#4-free_dlistintc) Function that frees a <code>dlistint_t</code> list.
 5.	[**5-get_dnodeint.c**:](#5-get_dnodeintc) Function that returns the nth node of a <code>dlistint_t</code> linked list.
 6.	[**6-sum_dlistint.c**:](#6-sum_dlistintc) Function that returns the sum of all the data (n) of a <code>dlistint_t</code> linked list.
-7.	[**7-insert_dnodeint.c, 2-add_dnodeint.c, 3-add_dnodeint_end.c**:](#7-insert_dnodeintc, 2-add_dnodeintc, 3-add_dnodeint_endc) Function that inserts a new node at a given position.Your files <code>2-add_dnodeint.c</code> and <code>3-add_dnodeint_end.c</code> will be compiled during the correction
+7.	[**7-insert_dnodeint.c, 2-add_dnodeint.c, 3-add_dnodeint_end.c**:](#7-insert_dnodeintc-2-add_dnodeintc-3-add_dnodeint_endc) Function that inserts a new node at a given position.Your files <code>2-add_dnodeint.c</code> and <code>3-add_dnodeint_end.c</code> will be compiled during the correction
 8.	[**8-delete_dnodeint.c**:](#8-delete_dnodeintc) Function that deletes the node at index <code>index</code> of a <code>dlistint_t</code> linked list.
 
 ## FILES :bookmark_tabs::bookmark_tabs::bookmark_tabs::

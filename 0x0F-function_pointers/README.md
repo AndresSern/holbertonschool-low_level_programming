@@ -23,7 +23,7 @@
 0.	[**0-print_name.c**:](#0-print_namec) Function that prints a name.
 1.	[**1-array_iterator.c**:](#1-array_iteratorc) Function that executes a function given as a parameter on each element of an array.
 2.	[**2-int_index.c**:](#2-int_indexc) Function that searches for an integer.
-3.	[**3-main.c, 3-op_functions.c, 3-get_op_func.c, 3-calc.h**:](#3-mainc, 3-op_functionsc, 3-get_op_funcc, 3-calch) Program that performs simple operations.This task requires that you create four different files.<strong>3-calc.h</strong>This file should contain all the function prototypes and data structures used by the program.
+3.	[**3-main.c, 3-op_functions.c, 3-get_op_func.c, 3-calc.h**:](#3-mainc-3-op_functionsc-3-get_op_funcc-3-calch) Program that performs simple operations.This task requires that you create four different files.<strong>3-calc.h</strong>This file should contain all the function prototypes and data structures used by the program.
 You can use this structure<strong>3-op_functions.c</strong>This file should contain the 5 following functions (not more)<strong>3-get_op_func.c</strong>This file should contain the function that selects the correct function to perform the operation asked by the user. You’re not allowed to declare any other function.<strong>3-main.c</strong>This file should contain your <code>main</code> function only.<strong>Compilation and examples</strong>
 
 ## FILES :bookmark_tabs::bookmark_tabs::bookmark_tabs::

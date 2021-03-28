@@ -17,7 +17,7 @@
 
 ## INTRODUCTION TO FILES :closed_book::closed_book::closed_book::
 
-0.	[** 0-print_list.c**:](# 0-print_listc) Function that prints all the elements of a <code>list_t</code> list.
+0.	[**0-print_list.c**:](#0-print_listc) Function that prints all the elements of a <code>list_t</code> list.
 1.	[**1-list_len.c**:](#1-list_lenc) Function that returns the number of elements in a linked <code>list_t</code> list.
 2.	[**2-add_node.c**:](#2-add_nodec) Function that adds a new node at the beginning of a <code>list_t</code> list.<em>^ Cohort 0, San Francisco students</em>
 3.	[**3-add_node_end.c**:](#3-add_node_endc) Function that adds a new node at the end of a <code>list_t</code> list.

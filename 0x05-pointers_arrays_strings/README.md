@@ -28,7 +28,7 @@
 5.	[**5-rev_string.c**:](#5-rev_stringc) Function that reverses a string.  
 6.	[**6-puts2.c**:](#6-puts2c) Function that prints every other character of a string, starting with the first character, followed by a new line.
 7.	[**7-puts_half.c**:](#7-puts_halfc) Function that prints half of a string, followed by a new line.
-8.	[** 8-print_array.c**:](# 8-print_arrayc) Function that prints <code>n</code> elements of an array of integers, followed by a new line.
+8.	[**8-print_array.c**:](#8-print_arrayc) Function that prints <code>n</code> elements of an array of integers, followed by a new line.
 9.	[**9-strcpy.c**:](#9-strcpyc) Function that copies the string pointed to by <code>src</code>, including the terminating null byte (<code>\0</code>), to the buffer pointed to by <code>dest</code>.FYI The standard library provides a similar function <code>strcpy</code>. Run <code>man strcpy</code> to learn more.
 10.	[**100-atoi.c**:](#100-atoic) Function that convert a string to an integer.FYI The standard library provides a similar function <code>atoi</code>. Run <code>man atoi</code> to learn more.
 
