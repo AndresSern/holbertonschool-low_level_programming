@@ -1,42 +1,37 @@
-# 0x0B. C - malloc, free
-In this directory you will see more examples or exercise about malloc and free
 
-## GENERAL:
+# 0x0C. C - More malloc, free
 
-1.   **How to use the exit function**
-2.   **What are the functions calloc and realloc from the standard library and how to use them**
+## GENERAL :open_book::open_book::open_book::
 
-## Read or watch:
+ <ol>
+	<li>How to use the <code>exit</code> function</li>
+	<li>What are the functions <code>calloc</code> and <code>realloc</code> from the standard library and how to use them</li>
+</ol>
 
-1.    **[Do I cast the result of malloc?](https://stackoverflow.com/questions/605845/do-i-cast-the-result-of-malloc)**
+## RESOURCES:
 
-## Files:
+ <ol>
+	<li><a href="/rltoken/xRakq81EUvl-3QG_3QUC8A" title="Do I cast the result of malloc?" target="_blank">Do I cast the result of malloc?</a> </li>
+</ol>
 
-1.  **0-malloc_checked.c**
-2.  **1-string_nconcat.c**
-3.  **2-calloc.c**
-4.  **3-array_range.c**
+## INTRODUCTION TO FILES :closed_book::closed_book::closed_book::
 
+0.	[**0-malloc_checked.c**:](#0-malloc_checkedc) Function that allocates memory using <code>malloc</code>.
+1.	[**1-string_nconcat.c**:](#1-string_nconcatc) Function that concatenates two strings.
+2.	[**2-calloc.c**:](#2-callocc) Function that allocates memory for an array, using <code>malloc</code>.FYI The standard library provides a different function <code>calloc</code>. Run <code>man calloc</code> to learn more.
+3.	[**3-array_range.c**:](#3-array_rangec) Function that creates an array of integers.
 
-## Tasks
+## FILES :bookmark_tabs::bookmark_tabs::bookmark_tabs::
 
-### 0. Trust no one 
-*   File: **0-malloc_checked.c**
+### 0-malloc_checked.c
 
-*Write a function that allocates memory using malloc.*
+**<p>Function that allocates memory using <code>malloc</code>.</p>**
 
-1.  Prototype: void *malloc_checked(unsigned int b);
-2.  Returns a pointer to the allocated memory
-3.  if malloc fails, the malloc_checked function should cause normal process termination with a status value of 98
-
-Example:
-
-```
-julien@ubuntu:~/0x0b. more malloc, free$ cat 0-main.c
+<pre><code>julien@ubuntu:~/0x0b. more malloc, free$ cat 0-main.c
 #include "holberton.h"
-#include <stdio.h>
-#include <stdlib.h>
-#include <limits.h>
+#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+#include &lt;limits.h&gt;
 
 /**
  * main - check the code for Holberton School students.
@@ -71,25 +66,17 @@ julien@ubuntu:~/0x0b. more malloc, free$ ./a
 0x7f31f6c19010
 julien@ubuntu:~/0x0b. more malloc, free$ echo $?
 98
-```
+julien@ubuntu:~/0x0b. more malloc, free$ 
+</code></pre>
 
-### 1. string_nconcat
+### 1-string_nconcat.c
 
-*   File: **1-string_nconcat.c**
+**<p>Function that concatenates two strings.</p>**
 
-*Write a function that concatenates two strings.*
-
-1.  Prototype: char *string_nconcat(char *s1, char *s2, unsigned int n);
-2.  The returned pointer shall point to a newly allocated space in memory, which contains s1, followed by the first n bytes of s2, and null terminated
-3.  If the function fails, it should return NULL
-4.  If n is greater or equal to the length of s2 then use the entire string s2
-5.  if NULL is passed, treat it as an empty string
-
-```
-julien@ubuntu:~/0x0b. more malloc, free$ cat 1-main.c
+<pre><code>julien@ubuntu:~/0x0b. more malloc, free$ cat 1-main.c
 #include "holberton.h"
-#include <stdio.h>
-#include <stdlib.h>
+#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
 
 /**
  * main - check the code for Holberton School students.
@@ -109,26 +96,17 @@ julien@ubuntu:~/0x0b. more malloc, free$ gcc -Wall -pedantic -Werror -Wextra 1-m
 julien@ubuntu:~/0x0b. more malloc, free$ ./b 
 Holberton School
 julien@ubuntu:~/0x0b. more malloc, free$ 
-```
+</code></pre>
 
-###  2. _calloc 
+### 2-calloc.c
 
-*   File: **2-calloc.c**
+**<p>Function that allocates memory for an array, using <code>malloc</code>.</p><p>FYI The standard library provides a different function <code>calloc</code>. Run <code>man calloc</code> to learn more.</p>**
 
-*Write a function that allocates memory for an array, using malloc.*
-
-1.  Prototype: void *_calloc(unsigned int nmemb, unsigned int size);
-2.  The _calloc function allocates memory for an array of nmemb elements of size bytes each and returns a pointer to the allocated memory.
-3.  The memory is set to zero
-4.  If nmemb or size is 0, then _calloc returns NULL
-5.  If malloc fails, then _calloc returns NULL
-
-```
-julien@ubuntu:~/0x0b. more malloc, free$ cat 2-main.c
+<pre><code>julien@ubuntu:~/0x0b. more malloc, free$ cat 2-main.c
 #include "holberton.h"
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
+#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+#include &lt;string.h&gt;
 
 /**
  * simple_print_buffer - prints buffer in hexa
@@ -142,13 +120,13 @@ void simple_print_buffer(char *buffer, unsigned int size)
     unsigned int i;
 
     i = 0;
-    while (i < size)
+    while (i &lt; size)
     {
         if (i % 10)
         {
             printf(" ");
         }
-        if (!(i % 10) && i)
+        if (!(i % 10) &amp;&amp; i)
         {
             printf("\n");
         }
@@ -188,26 +166,17 @@ julien@ubuntu:~/0x0b. more malloc, free$ ./c
 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00
 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x21
 julien@ubuntu:~/0x0b. more malloc, free$ 
-```
+</code></pre>
 
-###  3. array_range 
+### 3-array_range.c
 
-*   File: **3-array_range.c**
+**<p>Function that creates an array of integers.</p>**
 
-*Write a function that creates an array of integers.*
-
-1.  Prototype: int *array_range(int min, int max);
-2.  The array created should contain all the values from min (included) to max (included), ordered from min to max
-3.  Return: the pointer to the newly created array
-4.  If min > max, return NULL
-5.  If malloc fails, return NULL
-
-```
-julien@ubuntu:~/0x0b. more malloc, free$ cat 3-main.c
+<pre><code>julien@ubuntu:~/0x0b. more malloc, free$ cat 3-main.c
 #include "holberton.h"
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
+#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+#include &lt;string.h&gt;
 
 /**
  * simple_print_buffer - prints buffer in hexa
@@ -221,13 +190,13 @@ void simple_print_buffer(int *buffer, unsigned int size)
     unsigned int i;
 
     i = 0;
-    while (i < size)
+    while (i &lt; size)
     {
         if (i % 10)
         {
             printf(" ");
         }
-        if (!(i % 10) && i)
+        if (!(i % 10) &amp;&amp; i)
         {
             printf("\n");
         }
@@ -256,5 +225,5 @@ julien@ubuntu:~/0x0b. more malloc, free$ ./d
 0x00 0x01 0x02 0x03 0x04 0x05 0x06 0x07 0x08 0x09
 0x0a
 julien@ubuntu:~/0x0b. more malloc, free$ 
+</code></pre>
 
-```

@@ -1,53 +1,46 @@
 # 0x05. C - Pointers, arrays and strings
-In this directory you will learn how to use pointers, arrays and strings and ¿What is the meaning each one?
 
-## GENERAL:
+## GENERAL :open_book::open_book::open_book::
 
-1.  What are pointers and how to use them
-2.  What are arrays and how to use them
-3.  What are the differences between pointers and arrays
-4.  How to use strings and how to manipulate them
-5.  Scope of variables
+ <ol>
+	<li>What are pointers and how to use them</li>
+	<li>What are arrays and how to use them</li>
+	<li>What are the differences between pointers and arrays</li>
+	<li>How to use strings and how to manipulate them</li>
+	<li>Scope of variables</li>
+</ol>
 
+## RESOURCES:
 
-## Read or watch:
+ <ol>
+	<li><a href="/rltoken/JDzn5TfvFN41WKKvjOfvTg" title="C - Arrays" target="_blank">C - Arrays</a> </li>
+	<li><a href="/rltoken/9CA1cUi3AxHOszdncsKC7g" title="C - Pointers" target="_blank">C - Pointers</a> </li>
+	<li><a href="/rltoken/VBdJIrssmpg5YLOfoGTVnA" title="C - Strings" target="_blank">C - Strings</a> </li>
+</ol>
 
-1.    **[Pointers and arrays:](https://intranet.hbtn.io/concepts/60)**
-2.    **[Data Structures:](https://intranet.hbtn.io/concepts/120)**
-3.    **[C - Arrays:](https://www.tutorialspoint.com/cprogramming/c_arrays.htm)** 
-4.    **[C - Pointers:](https://www.tutorialspoint.com/cprogramming/c_pointers.htm)**
-5.    **[C - Strings:](https://www.tutorialspoint.com/cprogramming/c_strings.htm)**
+## INTRODUCTION TO FILES :closed_book::closed_book::closed_book::
 
-## Files:
+0.	[**0-reset_to_98.c**:](#0-reset_to_98c) Function that takes a pointer to an <code>int</code> as parameter and updates the value it points to to <code>98</code>.
+1.	[**1-swap.c**:](#1-swapc) Function that swaps the values of two integers.
+2.	[**2-strlen.c**:](#2-strlenc) Function that returns the length of a string.FYI The standard library provides a similar function <code>strlen</code>. Run <code>man strlen</code> to learn more.
+3.	[**3-puts.c**:](#3-putsc) Function that prints a string, followed by a new line, to <code>stdout</code>.FYI The standard library provides a similar function <code>puts</code>. Run <code>man puts</code> to learn more.
+4.	[**4-print_rev.c**:](#4-print_revc) Function that prints a string, in reverse, followed by a new line.
+5.	[**5-rev_string.c**:](#5-rev_stringc) Function that reverses a string.  
+6.	[**6-puts2.c**:](#6-puts2c) Function that prints every other character of a string, starting with the first character, followed by a new line.
+7.	[**7-puts_half.c**:](#7-puts_halfc) Function that prints half of a string, followed by a new line.
+8.	[** 8-print_array.c**:](# 8-print_arrayc) Function that prints <code>n</code> elements of an array of integers, followed by a new line.
+9.	[**9-strcpy.c**:](#9-strcpyc) Function that copies the string pointed to by <code>src</code>, including the terminating null byte (<code>\0</code>), to the buffer pointed to by <code>dest</code>.FYI The standard library provides a similar function <code>strcpy</code>. Run <code>man strcpy</code> to learn more.
+10.	[**100-atoi.c**:](#100-atoic) Function that convert a string to an integer.FYI The standard library provides a similar function <code>atoi</code>. Run <code>man atoi</code> to learn more.
 
-1.  **0-reset_to_98.c**
-2.  **1-swap.c**
-3.  **2-strlen.c**
-4.  **3-puts.c**
-5.  **4-print_rev.c**
-6.  **5-rev_string.c**
-7.  **6-puts2.c**
-8.  **7-puts_half.c**
-9.  **8-print_array.c**
-10.  **9-strcpy.c**
-11.  **100-atoi.c**
-11.  **101-keygen.c**
+## FILES :bookmark_tabs::bookmark_tabs::bookmark_tabs::
 
-## Tasks
+### 0-reset_to_98.c
 
-### 0. 98 Battery st. 
-*   File: **0-reset_to_98.c**
+**<p>Function that takes a pointer to an <code>int</code> as parameter and updates the value it points to to <code>98</code>.</p>**
 
-*Write a function that takes a pointer to an int as parameter and updates the value it points to to 98.*
-
-1.    Prototype: void reset_to_98(int *n);
-
-Example:
-
-```
-julien@ubuntu:~/0x05$ cat 0-main.c
+<pre><code>julien@ubuntu:~/0x05$ cat 0-main.c
 #include "holberton.h"
-#include <stdio.h>
+#include &lt;stdio.h&gt;
 
 /**
  * main - check the code for Holberton School students.
@@ -60,7 +53,7 @@ int main(void)
 
     n = 402;
     printf("n=%d\n", n);
-    reset_to_98(&n);
+    reset_to_98(&amp;n);
     printf("n=%d\n", n);
     return (0);
 }
@@ -69,19 +62,15 @@ julien@ubuntu:~/0x05$ ./0-98
 n=402
 n=98
 julien@ubuntu:~/0x05$ 
-```
+</code></pre>
 
-### 1. Don't swap horses in crossing a stream 
-*   File: **1-swap.c**
+### 1-swap.c
 
-*Write a function that swaps the values of two integers.*
+**<p>Function that swaps the values of two integers.</p>**
 
-1.    Prototype: void swap_int(int *a, int *b);
-
-```
-julien@ubuntu:~/0x05$ cat 1-main.c
+<pre><code>julien@ubuntu:~/0x05$ cat 1-main.c
 #include "holberton.h"
-#include <stdio.h>
+#include &lt;stdio.h&gt;
 
 /**
  * main - check the code for Holberton School students.
@@ -96,7 +85,7 @@ int main(void)
     a = 98;
     b = 42;
     printf("a=%d, b=%d\n", a, b);
-    swap_int(&a, &b);
+    swap_int(&amp;a, &amp;b);
     printf("a=%d, b=%d\n", a, b);
     return (0);
 }
@@ -105,19 +94,15 @@ julien@ubuntu:~/0x05$ ./1-swap
 a=98, b=42
 a=42, b=98
 julien@ubuntu:~/0x05$
-```
+</code></pre>
 
-### 2. This report, by its very length, defends itself against the risk of being read 
-*   File: **2-strlen.c**
+### 2-strlen.c
 
-*Write a function that returns the length of a string.*
+**<p>Function that returns the length of a string.</p><p>FYI The standard library provides a similar function <code>strlen</code>. Run <code>man strlen</code> to learn more.</p>**
 
-1.  Prototype: int _strlen(char *s);  
-
-```
-julien@ubuntu:~/0x05$ cat 2-main.c
+<pre><code>julien@ubuntu:~/0x05$ cat 2-main.c
 #include "holberton.h"
-#include <stdio.h>
+#include &lt;stdio.h&gt;
 
 /**
  * main - check the code for Holberton School students.
@@ -138,17 +123,13 @@ julien@ubuntu:~/0x05$ gcc -Wall -pedantic -Werror -Wextra 2-main.c 2-strlen.c -o
 julien@ubuntu:~/0x05$ ./2-strlen 
 10
 julien@ubuntu:~/0x05$ 
-```
+</code></pre>
 
-###  3. I do not fear computers. I fear the lack of them
-*   File: **: 3-puts.c**
+### 3-puts.c
 
-*Write a function that prints a string, followed by a new line, to stdout.*
+**<p>Function that prints a string, followed by a new line, to <code>stdout</code>.</p><p>FYI The standard library provides a similar function <code>puts</code>. Run <code>man puts</code> to learn more.</p>**
 
-1.  Prototype: void _puts(char *str);
-
-```
-julien@ubuntu:~/0x05$ cat 3-main.c
+<pre><code>julien@ubuntu:~/0x05$ cat 3-main.c
 #include "holberton.h"
 
 /**
@@ -168,17 +149,14 @@ julien@ubuntu:~/0x05$ gcc -Wall -pedantic -Werror -Wextra _putchar.c 3-main.c 3-
 julien@ubuntu:~/0x05$ ./3-puts 
 I do not fear computers. I fear the lack of them - Isaac Asimov
 julien@ubuntu:~/0x05$ 
-```
 
-###  4. I can only go one way. I've not got a reverse gear
-*   File: **4-print_rev.c**
+</code></pre>
 
-*Write a function that prints a string, in reverse, followed by a new line.*
+### 4-print_rev.c
 
-1.  Prototype: void print_rev(char *s);
+**<p>Function that prints a string, in reverse, followed by a new line.</p>**
 
-```
-julien@ubuntu:~/0x05$ cat 4-main.c
+<pre><code>julien@ubuntu:~/0x05$ cat 4-main.c
 #include "holberton.h"
 
 /**
@@ -198,20 +176,15 @@ julien@ubuntu:~/0x05$ gcc -Wall -pedantic -Werror -Wextra _putchar.c 4-main.c 4-
 julien@ubuntu:~/0x05$ ./4-print_rev 
 vomisA caasI - meht fo kcal eht raef I .sretupmoc raef ton od I
 julien@ubuntu:~/0x05$ 
-```
+</code></pre>
 
-###   5. A good engineer thinks in reverse and asks himself about the stylistic consequences of the components and systems he proposes
+### 5-rev_string.c
 
-* File: **5-rev_string.c**
+**<p>Function that reverses a string.  </p>**
 
-*Write a function that reverses a string.*
-
-1.  Prototype: void rev_string(char *s);
-
-```
-julien@ubuntu:~/0x05$ cat 5-main.c
+<pre><code>julien@ubuntu:~/0x05$ cat 5-main.c
 #include "holberton.h"
-#include <stdio.h>
+#include &lt;stdio.h&gt;
 
 /**
  * main - check the code for Holberton School students.
@@ -232,18 +205,13 @@ julien@ubuntu:~/0x05$ ./5-rev_string
 Holberton
 notrebloH
 julien@ubuntu:~/0x05$ 
-```
+</code></pre>
 
-### 6. Half the lies they tell about me aren't true
+### 6-puts2.c
 
-*   File: **6-puts2.c**
+**<p>Function that prints every other character of a string, starting with the first character, followed by a new line.</p>**
 
-*Write a function that prints every other character of a string, starting with the first character, followed by a new line.*
-
-1.    Prototype: void puts2(char *str);
-
-```
-julien@ubuntu:~/0x05$ cat 6-main.c
+<pre><code>julien@ubuntu:~/0x05$ cat 6-main.c
 #include "holberton.h"
 
 /**
@@ -263,21 +231,13 @@ julien@ubuntu:~/0x05$ gcc -Wall -pedantic -Werror -Wextra _putchar.c 6-main.c 6-
 julien@ubuntu:~/0x05$ ./6-puts2 
 02468
 julien@ubuntu:~/0x05$ 
-```
+</code></pre>
 
+### 7-puts_half.c
 
-### 7. Winning is only half of it. Having fun is the other half 
+**<p>Function that prints half of a string, followed by a new line.</p>**
 
-*   File: **7-puts_half.c** 
-
-*Write a function that prints half of a string, followed by a new line.*
-
-1.  Prototype: void puts_half(char *str);
-2.  The function should print the second half of the string
-3.  If the number of characters is odd, the function should print the last n characters of the string, where n = (length_of_the_string - 1) / 2
-
-```
-julien@ubuntu:~/0x05$ cat 7-main.c
+<pre><code>julien@ubuntu:~/0x05$ cat 7-main.c
 #include "holberton.h"
 
 /**
@@ -297,22 +257,13 @@ julien@ubuntu:~/0x05$ gcc -Wall -pedantic -Werror -Wextra _putchar.c 7-main.c 7-
 julien@ubuntu:~/0x05$ ./7-puts_half 
 56789
 julien@ubuntu:~/0x05$ 
-```
+</code></pre>
 
-### 8. Arrays are not pointers  
+###  8-print_array.c
 
-*   File: **8-print_array.c**
+**<p>Function that prints <code>n</code> elements of an array of integers, followed by a new line.</p>**
 
-*Write a function that prints n elements of an array of integers, followed by a new line.*
-
-1.  Prototype: void print_array(int *a, int n);
-2.  where n is the number of elements of the array to be printed
-3.  Numbers must be separated by comma, followed by a space
-4.  The numbers should be displayed in the same order as they are stored in the array
-5.  You are allowed to use printf
-
-```
-julien@ubuntu:~/0x05$ cat 8-main.c
+<pre><code>julien@ubuntu:~/0x05$ cat 8-main.c
 #include "holberton.h"
 
 /**
@@ -336,21 +287,15 @@ julien@ubuntu:~/0x05$ gcc -Wall -pedantic -Werror -Wextra 8-main.c 8-print_array
 julien@ubuntu:~/0x05$ ./8-print_array 
 98, 402, -198, 298, -1024
 julien@ubuntu:~/0x05$
-```
+</code></pre>
 
-###  9. strcpy
+### 9-strcpy.c
 
-*   File: **9-strcpy.c**
+**<p>Function that copies the string pointed to by <code>src</code>, including the terminating null byte (<code>\0</code>), to the buffer pointed to by <code>dest</code>.</p><p>FYI The standard library provides a similar function <code>strcpy</code>. Run <code>man strcpy</code> to learn more.</p>**
 
-*Write a function that copies the string pointed to by src, including the terminating null byte (\0), to the buffer pointed to by dest*
-
-1.    Prototype: char *_strcpy(char *dest, char *src);
-2.    Return value: the pointer to dest
-
-```
-julien@ubuntu:~/0x05$ cat 9-main.c
+<pre><code>julien@ubuntu:~/0x05$ cat 9-main.c
 #include "holberton.h"
-#include <stdio.h>
+#include &lt;stdio.h&gt;
 
 /**
  * main - check the code for Holberton School students.
@@ -360,11 +305,11 @@ julien@ubuntu:~/0x05$ cat 9-main.c
 int main(void)
 {
     char s1[98];
-    char *p;
+    char *ptr;
 
-    p = _strcpy(s1, "First, solve the problem. Then, write the code\n");
+    ptr = _strcpy(s1, "First, solve the problem. Then, write the code\n");
     printf("%s", s1);
-    printf("%s", p);
+    printf("%s", ptr);
     return (0);
 }
 julien@ubuntu:~/0x05$ gcc -Wall -pedantic -Werror -Wextra 9-main.c 9-strcpy.c -o 9-strcpy
@@ -372,29 +317,15 @@ julien@ubuntu:~/0x05$ ./9-strcpy
 First, solve the problem. Then, write the code
 First, solve the problem. Then, write the code
 julien@ubuntu:~/0x05$ 
-```
+</code></pre>
 
-### 10. Great leaders are willing to sacrifice the numbers to save the people. Poor leaders sacrifice the people to save the numbers #advanced
+### 100-atoi.c
 
-*   File: ****
+**<p>Function that convert a string to an integer.</p><p>FYI The standard library provides a similar function <code>atoi</code>. Run <code>man atoi</code> to learn more.</p>**
 
-*Write a function that convert a string to an integer.* 
-
-1.  Prototype: int _atoi(char *s);
-2.  The number in the string can be preceded by an infinite number of characters
-3.  You need to take into account all the - and + signs before the number
-4.  If there are no numbers in the string, the function must return 0
-5.  You are not allowed to use long
-6.  You are not allowed to declare new variables of “type” array
-7.  You are not allowed to hard-code special values
-8.  Your code needs to work on both ubuntu 14.04 LTS and 16.04 LTS
-9.  We will use the -fsanitize=signed-integer-overflow gcc flag to compile your code. If this flag is not available in you version of gcc, you can install the last version on your VM
-10. We will use GCC version 5 or above to compile - WARNING: it’s the only time you will use GCC 5, we highly recommend to create a new virtual machine for this task or use one of our container below.
-
-```
-julien@ubuntu:~/0x05$ cat 100-main.c
+<pre><code>julien@ubuntu:~/0x05$ cat 100-main.c
 #include "holberton.h"
-#include <stdio.h>
+#include &lt;stdio.h&gt;
 
 /**
  * main - check the code for Holberton School students.
@@ -403,24 +334,24 @@ julien@ubuntu:~/0x05$ cat 100-main.c
  */
 int main(void)
 {
-    int n;
+    int nb;
 
-    n = _atoi("98");
-    printf("%d\n", n);
-    n = _atoi("-402");
-    printf("%d\n", n);
-    n = _atoi("          ------++++++-----+++++--98");
-    printf("%d\n", n);
-    n = _atoi("214748364");
-    printf("%d\n", n);
-    n = _atoi("0");
-    printf("%d\n", n);
-    n = _atoi("Suite 402");
-    printf("%d\n", n);
-    n = _atoi("         +      +    -    -98 Battery Street; San Francisco, CA 94111 - USA             ");
-    printf("%d\n", n);
-    n = _atoi("---++++ -++ Sui - te -   402 #cisfun :)");
-    printf("%d\n", n);
+    nb = _atoi("98");
+    printf("%d\n", nb);
+    nb = _atoi("-402");
+    printf("%d\n", nb);
+    nb = _atoi("          ------++++++-----+++++--98");
+    printf("%d\n", nb);
+    nb = _atoi("214748364");
+    printf("%d\n", nb);
+    nb = _atoi("0");
+    printf("%d\n", nb);
+    nb = _atoi("Suite 402");
+    printf("%d\n", nb);
+    nb = _atoi("         +      +    -    -98 Battery Street; San Francisco, CA 94111 - USA             ");
+    printf("%d\n", nb);
+    nb = _atoi("---++++ -++ Sui - te -   402 #cisfun :)");
+    printf("%d\n", nb);
     return (0);
 }
 julien@ubuntu:~/0x05$ gcc -Wall -pedantic -Werror -Wextra -fsanitize=signed-integer-overflow 100-main.c 100-atoi.c -o 100-atoi
@@ -433,4 +364,6 @@ julien@ubuntu:~/0x05$ ./100-atoi
 402
 98
 402
-```
+julien@ubuntu:~/0x05$ 
+</code></pre>
+

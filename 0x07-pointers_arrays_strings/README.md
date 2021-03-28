@@ -1,71 +1,63 @@
-# 0x06. C - More pointers, arrays and strings
-In this directory you will learn how to use pointers, arrays and strings and ¿What is the meaning each one?
+# 0x07. C - Even more pointers, arrays and strings
 
-## GENERAL:
+## GENERAL :open_book::open_book::open_book::
 
-1.  What are pointers and how to use them
-2.  What are arrays and how to use them
-3.  What are the differences between pointers and arrays
-4.  How to use strings and how to manipulate them
-5.  Scope of variables
-6.  What are the most common C standard library functions to manipulate strings
-7.  What are multidimensional arrays and how to use them
+ <ol>
+	<li>What are pointers to pointers and how to use them</li>
+	<li>What are multidimensional arrays and how to use them</li>
+	<li>What are the most common C standard library functions to manipulate strings</li>
+</ol>
 
+## RESOURCES:
 
-## Read or watch:
+ <ol>
+	<li><a href="/rltoken/97ic1ots5Y44UW4c5HBtRQ" title="C - Pointer to Pointer" target="_blank">C - Pointer to Pointer</a> </li>
+	<li><a href="/rltoken/SLQf1I04zyLrA0OYFgXzlg" title="C – Pointer to Pointer with example" target="_blank">C – Pointer to Pointer with example</a> </li>
+	<li><a href="/rltoken/OINOASSTk6-D9PqX2oZZYw" title="Multi-dimensional Arrays in C" target="_blank">Multi-dimensional Arrays in C</a> </li>
+	<li><a href="/rltoken/czf9xxN9_8ISUNWTsLfBcw" title="Two dimensional (2D) arrays in C programming with example" target="_blank">Two dimensional (2D) arrays in C programming with example</a> </li>
+</ol>
 
-1.  **[Pointers and arrays:](https://intranet.hbtn.io/concepts/60)**
-2.  **[Data Structures:](https://intranet.hbtn.io/concepts/120)**
-3.  **[C - Arrays:](https://www.tutorialspoint.com/cprogramming/c_arrays.htm)** 
-4.  **[C - Pointers:](https://www.tutorialspoint.com/cprogramming/c_pointers.htm)**
-5.  **[C - Strings:](https://www.tutorialspoint.com/cprogramming/c_strings.htm)**
-6.  **[C - Pointer to Pointer:](https://www.tutorialspoint.com/cprogramming/c_pointer_to_pointer.htm)**
-7.  **[C – Pointer to Pointer with example:](https://beginnersbook.com/2014/01/c-pointer-to-pointer/)**
-8.  **[Multi-dimensional Arrays in C:](https://www.tutorialspoint.com/cprogramming/c_multi_dimensional_arrays.htm)**
-9.  **[Two dimensional (2D) arrays in C programming with example:](https://beginnersbook.com/2014/01/2d-arrays-in-c-example/)**
+## INTRODUCTION TO FILES :closed_book::closed_book::closed_book::
 
-## Files:
+0.	[**0-memset.c**:](#0-memsetc) Function that fills memory with a constant byte.FYI The standard library provides a similar function <code>memset</code>. Run <code>man memset</code> to learn more.
+1.	[**1-memcpy.c**:](#1-memcpyc) Function that copies memory area.FYI The standard library provides a similar function <code>memcpy</code>. Run <code>man memcpy</code> to learn more.
+2.	[**2-strchr.c**:](#2-strchrc) Function that locates a character in a string.FYI The standard library provides a similar function <code>strchr</code>. Run <code>man strchr</code> to learn more.
+3.	[**3-strspn.c**:](#3-strspnc) Function that gets the length of a prefix substring.FYI The standard library provides a similar function <code>strspn</code>. Run <code>man strspn</code> to learn more.
+4.	[**4-strpbrk.c**:](#4-strpbrkc) Function that searches a string for any of a set of bytes.FYI The standard library provides a similar function <code>strpbrk</code>. Run <code>man strpbrk</code> to learn more.
+5.	[**5-strstr.c**:](#5-strstrc) Function that locates a substring.FYI The standard library provides a similar function <code>strstr</code>. Run <code>man strstr</code> to learn more.
+6.	[**7-print_chessboard.c**:](#7-print_chessboardc) Function that prints the chessboard.
+7.	[**8-print_diagsums.c**:](#8-print_diagsumsc) Function that prints the sum of the two diagonals of a square matrix of integers.Note that in the following example we are casting an <code>int[][]</code> into an <code>int*</code>. This is not something you should do. The goal here is to make sure you understand how an array of array is stored in memory.
+8.	[**9-set_string.c**:](#9-set_stringc) Function that sets the value of a pointer to a char.
 
-1.    **0-memset.c**
-2.    **1-memcpy.c**
-3.    **2-strchr.c**
-4.    **3-strspn.c**
-5.    **4-strpbrk.c**
-6.    **5-strstr.c**
-7.    **7-print_chessboard.c**
-8.    **8-print_diagsums.c**
-9.    **9-set_string.c**
+## FILES :bookmark_tabs::bookmark_tabs::bookmark_tabs::
 
-## Tasks
+### 0-memset.c
 
-### 0. memset 
-*   File: **0-memset.c**
+**<p>Function that fills memory with a constant byte.</p><p>FYI The standard library provides a similar function <code>memset</code>. Run <code>man memset</code> to learn more.</p>**
 
-*Write a function that fills memory with a constant byte.*
-
-1.	Prototype: char *_memset(char *s, char b, unsigned int n);
-2.	The _memset() function fills the first n bytes of the memory area pointed to by s with the constant byte b
-3.	Returns a pointer to the memory area s
-
-Example:
-
-```
-julien@ubuntu:~/0x07$ cat 0-main.c
+<pre><code>julien@ubuntu:~/0x07$ cat 0-main.c
 #include "holberton.h"
-#include <stdio.h>
+#include &lt;stdio.h&gt;
 
+/**
+ * simple_print_buffer - prints buffer in hexa
+ * @buffer: the address of memory to print
+ * @size: the size of the memory to print
+ *
+ * Return: Nothing.
+ */
 void simple_print_buffer(char *buffer, unsigned int size)
 {
         unsigned int i;
 
         i = 0;
-        while (i < size)
+        while (i &lt; size)
         {
                 if (i % 10)
                 {
                         printf(" ");
                 }
-                if (!(i % 10) && i)
+                if (!(i % 10) &amp;&amp; i)
                 {
                         printf("\n");
                 }
@@ -74,6 +66,12 @@ void simple_print_buffer(char *buffer, unsigned int size)
         }
         printf("\n");
 }
+
+/**
+ * main - check the code for Holberton School students.
+ *
+ * Return: Always 0.
+ */
 int main(void)
 {
     char buffer[98] = {0x00};
@@ -108,21 +106,15 @@ julien@ubuntu:~/0x07$ ./0-memset
 0x01 0x01 0x01 0x01 0x01 0x01 0x01 0x01 0x01 0x01
 0x01 0x01 0x01 0x01 0x01 0x00 0x00 0x00
 julien@ubuntu:~/0x07$ 
-```
+</code></pre>
 
-### 1. memcpy 
-*   File: **1-memcpy.c**
+### 1-memcpy.c
 
-*Write a function that copies memory area.*
+**<p>Function that copies memory area.</p><p>FYI The standard library provides a similar function <code>memcpy</code>. Run <code>man memcpy</code> to learn more.</p>**
 
-1.	Prototype: char *_memcpy(char *dest, char *src, unsigned int n);
-2.	The _memcpy() function copies n bytes from memory area src to memory area dest
-3	Returns a pointer to dest
-
-```
-julien@ubuntu:~/0x07$ cat 1-main.c
+<pre><code>julien@ubuntu:~/0x07$ cat 1-main.c
 #include "holberton.h"
-#include <stdio.h>
+#include &lt;stdio.h&gt;
 
 /**
  * simple_print_buffer - prints buffer in hexa
@@ -136,13 +128,13 @@ void simple_print_buffer(char *buffer, unsigned int size)
     unsigned int i;
 
     i = 0;
-    while (i < size)
+    while (i &lt; size)
     {
         if (i % 10)
         {
             printf(" ");
         }
-        if (!(i % 10) && i)
+        if (!(i % 10) &amp;&amp; i)
         {
             printf("\n");
         }
@@ -192,20 +184,21 @@ julien@ubuntu:~/0x07$ ./1-memcpy
 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00
 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00
 julien@ubuntu:~/0x07$ 
-```
+</code></pre>
 
-###  2. strchr  
-*   File: **2-strchr.c**
+### 2-strchr.c
 
-*Write a function that locates a character in a string.*
+**<p>Function that locates a character in a string.</p><p>FYI The standard library provides a similar function <code>strchr</code>. Run <code>man strchr</code> to learn more.</p>**
 
-1.	Prototype: char *_strchr(char *s, char c);
-2.	Returns a pointer to the first occurrence of the character c in the string s, or NULL if the character is not found
-
-```
+<pre><code>julien@ubuntu:~/0x07$ cat 2-main.c
 #include "holberton.h"
-#include <stdio.h>
+#include &lt;stdio.h&gt;
 
+/**
+ * main - check the code for Holberton School students.
+ *
+ * Return: Always 0.
+ */
 int main(void)
 {
     char *s = "hello";
@@ -222,20 +215,22 @@ int main(void)
 julien@ubuntu:~/0x07$ gcc -Wall -pedantic -Werror -Wextra 2-main.c 2-strchr.c -o 2-strchr
 julien@ubuntu:~/0x07$ ./2-strchr 
 llo
-```
+julien@ubuntu:~/0x07$ 
+</code></pre>
 
-###  3. strspn 
-*   File: **3-strspn.c**
+### 3-strspn.c
 
-*Write a function that gets the length of a prefix substring.*
+**<p>Function that gets the length of a prefix substring.</p><p>FYI The standard library provides a similar function <code>strspn</code>. Run <code>man strspn</code> to learn more.</p>**
 
-1.	Prototype: unsigned int _strspn(char *s, char *accept);
-2.	Returns the number of bytes in the initial segment of s which consist only of bytes from accept
-
-```
+<pre><code>julien@ubuntu:~/0x07$ cat 3-main.c
 #include "holberton.h"
-#include <stdio.h>
+#include &lt;stdio.h&gt;
 
+/**
+ * main - check the code for Holberton School students.
+ *
+ * Return: Always 0.
+ */
 int main(void)
 {
     char *s = "hello, world";
@@ -246,21 +241,25 @@ int main(void)
     printf("%u\n", n);
     return (0);
 }
-```
+julien@ubuntu:~/0x07$ gcc -Wall -pedantic -Werror -Wextra 3-main.c 3-strspn.c -o 3-strspn
+julien@ubuntu:~/0x07$ ./3-strspn 
+5
+julien@ubuntu:~/0x07$ 
+</code></pre>
 
-###  4. strpbrk  
-*   File: **4-strpbrk.c**
+### 4-strpbrk.c
 
-*Write a function that searches a string for any of a set of bytes.*
+**<p>Function that searches a string for any of a set of bytes.</p><p>FYI The standard library provides a similar function <code>strpbrk</code>. Run <code>man strpbrk</code> to learn more.</p>**
 
-1.	Prototype: char *_strpbrk(char *s, char *accept);
-2.	The _strpbrk() function locates the first occurrence in the string s of any of the bytes in the string accept
-3.	Returns a pointer to the byte in s that matches one of the bytes in accept, or NULL if no such byte is found
-
-```
-julien@ubuntu:~/0x07$ cat 4-main.c
+<pre><code>julien@ubuntu:~/0x07$ cat 4-main.c
 #include "holberton.h"
-#include <stdio.h>
+#include &lt;stdio.h&gt;
+
+/**
+ * main - check the code for Holberton School students.
+ *
+ * Return: Always 0.
+ */
 int main(void)
 {
     char *s = "hello, world";
@@ -274,22 +273,16 @@ int main(void)
 julien@ubuntu:~/0x07$ gcc -Wall -pedantic -Werror -Wextra 4-main.c 4-strpbrk.c -o 4-strpbrk
 julien@ubuntu:~/0x07$ ./4-strpbrk 
 llo, world
+julien@ubuntu:~/0x07$ 
+</code></pre>
 
-```
+### 5-strstr.c
 
-###   5. strstr  
+**<p>Function that locates a substring.</p><p>FYI The standard library provides a similar function <code>strstr</code>. Run <code>man strstr</code> to learn more.</p>**
 
-* File: **5-strstr.c**
-
-*Write a function that locates a substring.*
-
-1.	Prototype: char *_strstr(char *haystack, char *needle);
-2.	The _strstr() function finds the first occurrence of the substring needle in the string haystack. The terminating null bytes (\0) are not compared
-3.	Returns a pointer to the beginning of the located substring, or NULL if the substring is not found.
-
-```
+<pre><code>julien@ubuntu:~/0x07$ cat 5-main.c
 #include "holberton.h"
-#include <stdio.h>
+#include &lt;stdio.h&gt;
 
 /**
  * main - check the code for Holberton School students.
@@ -310,20 +303,22 @@ julien@ubuntu:~/0x07$ gcc -Wall -pedantic -Werror -Wextra 5-main.c 5-strstr.c -o
 julien@ubuntu:~/0x07$ ./5-strstr 
 world
 julien@ubuntu:~/0x07$ 
-```
 
-### 6. Chess is mental torture
-*   File: **7-print_chessboard.c**
+</code></pre>
 
-*Write a function that prints the chessboard.*
+### 7-print_chessboard.c
 
-1.    Prototype: void print_chessboard(char (*a)[8]);  
+**<p>Function that prints the chessboard.</p>**
 
-```
-julien@ubuntu:~/0x07$ cat 7-main.c 
+<pre><code>julien@ubuntu:~/0x07$ cat 7-main.c 
 #include "holberton.h"
-#include <stdio.h>
+#include &lt;stdio.h&gt;
 
+/**
+ * main - check the code for Holberton School students.
+ *
+ * Return: Always 0.
+ */
 int main(void)
 {
     char board[8][8] = {
@@ -349,25 +344,16 @@ pppppppp
 
 PPPPPPPP
 RKBQKBKR
-julien@ubuntu:~/c/curriculum_by_julien/holbertonschool-low_level_programming/0x07$
-```
+julien@ubuntu:~/c/curriculum_by_julien/holbertonschool-low_level_programming/0x07$ 
+</code></pre>
 
+### 8-print_diagsums.c
 
-### 7. The line of life is a ragged diagonal between duty and desire 
-*   File: **: 8-print_diagsums.c** 
+**<p>Function that prints the sum of the two diagonals of a square matrix of integers.</p><p>Note that in the following example we are casting an <code>int[][]</code> into an <code>int*</code>. This is not something you should do. The goal here is to make sure you understand how an array of array is stored in memory.</p>**
 
-*Write a function that prints the sum of the two diagonals of a square matrix of integers.*
-
-1.	Prototype: void print_diagsums(int *a, int size);
-2.	Format: see example
-3.	You are allowed to use the standard library
-
-*Note that in the following example we are casting an int[][] into an int*. This is not something you should do. The goal here is to make sure you understand how an array of array is stored in memory.*
-
-```
-julien@ubuntu:~/0x07$ cat 8-main.c
+<pre><code>julien@ubuntu:~/0x07$ cat 8-main.c
 #include "holberton.h"
-#include <stdio.h>
+#include &lt;stdio.h&gt;
 
 /**
  * main - check the code for Holberton School students.
@@ -397,27 +383,28 @@ julien@ubuntu:~/0x07$ ./8-print_diagsums
 113, 1016
 1214556093, 1137318
 julien@ubuntu:~/0x07$ 
-```
+</code></pre>
 
-### 8. Double pointer, double fun 
+### 9-set_string.c
 
-*   File: **9-set_string.c**
+**<p>Function that sets the value of a pointer to a char.</p>**
 
-*Write a function that sets the value of a pointer to a char.*
-
-1.    Prototype: void set_string(char **s, char *to); 
-
-```
-julien@ubuntu:~/0x07$ cat 9-main.c
+<pre><code>julien@ubuntu:~/0x07$ cat 9-main.c
 #include "holberton.h"
-#include <stdio.h>
+#include &lt;stdio.h&gt;
+
+/**
+ * main - check the code for Holberton School students.
+ *
+ * Return: Always 0.
+ */
 int main(void)
 {
     char *s0 = "Bob Dylan";
     char *s1 = "Robert Allen";
 
     printf("%s, %s\n", s0, s1);
-    set_string(&s1, s0);
+    set_string(&amp;s1, s0);
     printf("%s, %s\n", s0, s1);
     return (0);
 }
@@ -426,4 +413,5 @@ julien@ubuntu:~/0x07$ ./9-set_string
 Bob Dylan, Robert Allen
 Bob Dylan, Bob Dylan
 julien@ubuntu:~/0x07$ 
-```
+</code></pre>
+

@@ -1,111 +1,113 @@
 # 0x06. C - More pointers, arrays and strings
-In this directory you will learn how to use pointers, arrays and strings and ¿What is the meaning each one?
 
-## GENERAL:
+## GENERAL :open_book::open_book::open_book::
 
-1.  What are pointers and how to use them
-2.  What are arrays and how to use them
-3.  What are the differences between pointers and arrays
-4.  How to use strings and how to manipulate them
-5.  Scope of variables
+ <ol>
+	<li>What are pointers and how to use them</li>
+	<li>What are arrays and how to use them</li>
+	<li>What are the differences between pointers and arrays</li>
+	<li>How to use strings and how to manipulate them</li>
+	<li>Scope of variables</li>
+</ol>
+
+## RESOURCES:
+
+ <ol>
+	<li><a href="/rltoken/JDzn5TfvFN41WKKvjOfvTg" title="C - Arrays" target="_blank">C - Arrays</a> </li>
+	<li><a href="/rltoken/9CA1cUi3AxHOszdncsKC7g" title="C - Pointers" target="_blank">C - Pointers</a> </li>
+	<li><a href="/rltoken/VBdJIrssmpg5YLOfoGTVnA" title="C - Strings" target="_blank">C - Strings</a> </li>
+</ol>
 
 
-## Read or watch:
+## INTRODUCTION TO FILES :closed_book::closed_book::closed_book::
 
-1.    **[Pointers and arrays:](https://intranet.hbtn.io/concepts/60)**
-2.    **[Data Structures:](https://intranet.hbtn.io/concepts/120)**
-3.    **[C - Arrays:](https://www.tutorialspoint.com/cprogramming/c_arrays.htm)** 
-4.    **[C - Pointers:](https://www.tutorialspoint.com/cprogramming/c_pointers.htm)**
-5.    **[C - Strings:](https://www.tutorialspoint.com/cprogramming/c_strings.htm)**
+0.	[**0-strcat.c**:](#0-strcatc) Function that concatenates two strings.FYI The standard library provides a similar function <code>strcat</code>. Run <code>man strcat</code> to learn more.
+1.	[**1-strncat.c**:](#1-strncatc) Function that concatenates two strings.FYI The standard library provides a similar function <code>strncat</code>. Run <code>man strncat</code> to learn more.
+2.	[**2-strncpy.c**:](#2-strncpyc) Function that copies a string.FYI The standard library provides a similar function <code>strncpy</code>. Run <code>man strncpy</code> to learn more.
+3.	[**3-strcmp.c**:](#3-strcmpc) Function that compares two strings.FYI The standard library provides a similar function <code>strcmp</code>. Run <code>man strcmp</code> to learn more.
+4.	[**4-rev_array.c**:](#4-rev_arrayc) Function that reverses the content of an array of integers.
+5.	[**5-string_toupper.c**:](#5-string_toupperc) Function that changes all lowercase letters of a string to uppercase.
+6.	[**6-cap_string.c**:](#6-cap_stringc) Function that capitalizes all words of a string.
+7.	[**7-leet.c**:](#7-leetc) Function that encodes a string into <a href="/rltoken/HDZQ5imXboSDnMXO9P0-Tg" title="1337" target="_blank">1337</a>.
+8.	[**8-rot13.c**:](#8-rot13c) Function that encodes a string using <a href="/rltoken/IFaBd0QrK-h50gV7IoW9iQ" title="rot13" target="_blank">rot13</a>.
+9.	[**100-print_number.c**:](#100-print_numberc) Function that prints an integer.
+10.	[**101-magic.c**:](#101-magicc) <img src="https//holbertonintranet.s3.amazonaws.com/uploads/medias/2020/9/21b4fc5c1b5df84e6ae4fe8807aa359d929e748a.gif?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIARDDGGGOUWMNL5ANN%2F20210328%2Fus-east-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20210328T161304Z&amp;X-Amz-Expires=86400&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Signature=9295ed3246093135b6175ae5ea4f038e15ab1b9a41f0b1d11c1a2e2b3024d122" alt="" style="">
+<br><br>
+Add one line to <a href="https//github.com/holbertonschool/make_magic_happen/blob/master/magic.c" title="this code" target="_blank">this code</a>, so that the program prints <code>a[2] = 98</code>, followed by a new line.
 
-## Files:
+## FILES :bookmark_tabs::bookmark_tabs::bookmark_tabs::
 
-1.  **0-strcat.c **
-2.  **1-strncat.c**
-3.  **2-strncpy.c**
-4.  **3-strcmp.c**
-5.  **4-rev_array.c**
-6.  **5-string_toupper.c**
-7.  **6-cap_string.c**
-8.  **7-leet.c**
-9.  **8-rot13.c**
-10.  **100-print_number.c**
-11.  **101-magic.c **
+### 0-strcat.c
 
-## Tasks
+**<p>Function that concatenates two strings.</p><p>FYI The standard library provides a similar function <code>strcat</code>. Run <code>man strcat</code> to learn more.</p>**
 
-### 0. strcat
-*   File: **0-strcat.c**
-
-*Write a function that concatenates two strings.*
-
-1.  Prototype: char *_strcat(char *dest, char *src);
-2.  This function appends the src string to the dest string, overwriting the terminating null byte (\0) at the end of dest, and then adds a terminating null byte
-3.  Returns a pointer to the resulting string dest  
-
-Example:
-
-```
+<pre><code>julien@ubuntu:~/c/curriculum_by_julien/holbertonschool-low_level_programming/0x06$ cat 0-main.c
 #include "holberton.h"
-#include <stdio.h>
+#include &lt;stdio.h&gt;
+
+/**
+ * main - check the code for Holberton School students.
+ *
+ * Return: Always 0.
+ */
 int main(void)
 {
     char s1[98] = "Hello ";
     char s2[] = "World!\n";
-    char *p;
+    char *ptr;
 
     printf("%s\n", s1);
     printf("%s", s2);
-    p = _strcat(s1, s2);
+    ptr = _strcat(s1, s2);
     printf("%s", s1);
     printf("%s", s2);
-    printf("%s", p);
+    printf("%s", ptr);
     return (0);
 }
 julien@ubuntu:~/0x06$ gcc -Wall -pedantic -Werror -Wextra 0-main.c 0-strcat.c -o 0-strcat
-julien@ubuntu:~/0x06$ ./0-strcat 
-Hello 
+julien@ubuntu:~/0x06$ ./0-strcat
+Hello
 World!
 Hello World!
 World!
 Hello World!
-```
+julien@ubuntu:~/0x06$
+</code></pre>
 
-### 1. strncat  
-*   File: ****
+### 1-strncat.c
 
-*Write a function that concatenates two strings.*
+**<p>Function that concatenates two strings.</p><p>FYI The standard library provides a similar function <code>strncat</code>. Run <code>man strncat</code> to learn more.</p>**
 
-1.  Prototype: char *_strncat(char *dest, char *src, int n);
-2.  The _strncat function is similar to the _strcat function, except that
-     - it will use at most n bytes from src; and
-     - src does not need to be null-terminated if it contains n or more bytes    
-3.  Return a pointer to the resulting string dest
-
-```
+<pre><code>julien@ubuntu:~/0x06$ cat 1-main.c
 #include "holberton.h"
-#include <stdio.h>
+#include &lt;stdio.h&gt;
+
+/**
+ * main - check the code for Holberton School students.
+ *
+ * Return: Always 0.
+ */
 int main(void)
 {
     char s1[98] = "Hello ";
     char s2[] = "World!\n";
-    char *p;
+    char *ptr;
 
     printf("%s\n", s1);
     printf("%s", s2);
-    p = _strncat(s1, s2, 1);
+    ptr = _strncat(s1, s2, 1);
     printf("%s\n", s1);
     printf("%s", s2);
-    printf("%s\n", p);
-    p = _strncat(s1, s2, 1024);
+    printf("%s\n", ptr);
+    ptr = _strncat(s1, s2, 1024);
     printf("%s", s1);
     printf("%s", s2);
-    printf("%s", p);
+    printf("%s", ptr);
     return (0);
 }
 julien@ubuntu:~/0x06$ gcc -Wall -pedantic -Werror -Wextra 1-main.c 1-strncat.c -o 1-strncat
-julien@ubuntu:~/0x06$ ./1-strncat 
-Hello 
+julien@ubuntu:~/0x06$ ./1-strncat
+Hello
 World!
 Hello W
 World!
@@ -113,45 +115,47 @@ Hello W
 Hello WWorld!
 World!
 Hello WWorld!
+julien@ubuntu:~/0x06$
+</code></pre>
 
-```
+### 2-strncpy.c
 
-###  2. strncpy  
-*   File: **2-strncpy.c**
+**<p>Function that copies a string.</p><p>FYI The standard library provides a similar function <code>strncpy</code>. Run <code>man strncpy</code> to learn more.</p>**
 
-*Write a function that copies a string.*
-
-1.  Prototype: char *_strncpy(char *dest, char *src, int n);
-2.  Your function should work exactly like strncpy
-
-```
+<pre><code>julien@ubuntu:~/0x06$ cat 2-main.c
 #include "holberton.h"
-#include <stdio.h>
+#include &lt;stdio.h&gt;
+
+/**
+ * main - check the code for Holberton School students.
+ *
+ * Return: Always 0.
+ */
 int main(void)
 {
     char s1[98];
-    char *p;
+    char *ptr;
     int i;
 
-    for (i = 0; i < 98 - 1; i++)
+    for (i = 0; i &lt; 98 - 1; i++)
     {
         s1[i] = '*';
     }
     s1[i] = '\0';
     printf("%s\n", s1);
-    p = _strncpy(s1, "First, solve the problem. Then, write the code\n", 5);
+    ptr = _strncpy(s1, "First, solve the problem. Then, write the code\n", 5);
     printf("%s\n", s1);
-    printf("%s\n", p);
-    p = _strncpy(s1, "First, solve the problem. Then, write the code\n", 90);
+    printf("%s\n", ptr);
+    ptr = _strncpy(s1, "First, solve the problem. Then, write the code\n", 90);
     printf("%s", s1);
-    printf("%s", p);
-    for (i = 0; i < 98; i++)
+    printf("%s", ptr);
+    for (i = 0; i &lt; 98; i++)
     {
         if (i % 10)
         {
             printf(" ");
         }
-        if (!(i % 10) && i)
+        if (!(i % 10) &amp;&amp; i)
         {
             printf("\n");
         }
@@ -161,7 +165,7 @@ int main(void)
     return (0);
 }
 julien@ubuntu:~/0x06$ gcc -Wall -pedantic -Werror -Wextra 2-main.c 2-strncpy.c -o 2-strncpy
-julien@ubuntu:~/0x06$ ./2-strncpy 
+julien@ubuntu:~/0x06$ ./2-strncpy
 *************************************************************************************************
 First********************************************************************************************
 First********************************************************************************************
@@ -177,20 +181,22 @@ First, solve the problem. Then, write the code
 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00
 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00
 0x2a 0x2a 0x2a 0x2a 0x2a 0x2a 0x2a 0x00
-```
+julien@ubuntu:~/0x06$
+</code></pre>
 
-###  3. strcmp 
-*   File: **3-strcmp.c**
+### 3-strcmp.c
 
-*Write a function that compares two strings.*
+**<p>Function that compares two strings.</p><p>FYI The standard library provides a similar function <code>strcmp</code>. Run <code>man strcmp</code> to learn more.</p>**
 
-1.  Prototype: int _strcmp(char *s1, char *s2);
-2.  Your function should work exactly like strcmp
-
-```
-julien@ubuntu:~/0x06$ cat 3-main.c
+<pre><code>julien@ubuntu:~/0x06$ cat 3-main.c
 #include "holberton.h"
-#include <stdio.h>
+#include &lt;stdio.h&gt;
+
+/**
+ * main - check the code for Holberton School students.
+ *
+ * Return: Always 0.
+ */
 int main(void)
 {
     char s1[] = "Hello";
@@ -202,28 +208,34 @@ int main(void)
     return (0);
 }
 julien@ubuntu:~/0x06$ gcc -Wall -pedantic -Werror -Wextra 3-main.c 3-strcmp.c -o 3-strcmp
-julien@ubuntu:~/0x06$ ./3-strcmp 
+julien@ubuntu:~/0x06$ ./3-strcmp
 -15
 15
-```
+0
+julien@ubuntu:~/0x06$
+</code></pre>
 
-###  4. I am a kind of paranoid in reverse. I suspect people of plotting to make me happy 
-*   File: **4-rev_array.c**
+### 4-rev_array.c
 
-*rite a function that reverses the content of an array of integers.*
+**<p>Function that reverses the content of an array of integers.</p>**
 
-1.  Prototype: void reverse_array(int *a, int n);
-2.  Where n is the number of elements of the array
-
-```
+<pre><code>julien@ubuntu:~/0x06$ cat 4-main.c
 #include "holberton.h"
-#include <stdio.h>
+#include &lt;stdio.h&gt;
+
+/**
+ * main - check the code for Holberton School students.
+ * @a: an array of integers
+ * @n: the number of elements to swap
+ *
+ * Return: nothing.
+ */
 void print_array(int *a, int n)
 {
     int i;
 
     i = 0;
-    while (i < n)
+    while (i &lt; n)
     {
         if (i != 0)
         {
@@ -250,93 +262,87 @@ int main(void)
     return (0);
 }
 julien@ubuntu:~/0x06$ gcc -Wall -pedantic -Werror -Wextra 4-main.c 4-rev_array.c -o 4-rev_array
-julien@ubuntu:~/0x06$ ./4-rev_array 
+julien@ubuntu:~/0x06$ ./4-rev_array
 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 98, 1024, 1337
 1337, 1024, 98, 9, 8, 7, 6, 5, 4, 3, 2, 1, 0
-```
+julien@ubuntu:~/0x06$
+</code></pre>
 
-###   5. Always look up
-* File: **5-string_toupper.c**
+### 5-string_toupper.c
 
-*Write a function that changes all lowercase letters of a string to uppercase.*
+**<p>Function that changes all lowercase letters of a string to uppercase.</p>**
 
-1.  Prototype: char *string_toupper(char *);
-
-```
-julien@ubuntu:~/0x06$ cat 5-main.c
+<pre><code>julien@ubuntu:~/0x06$ cat 5-main.c
 #include "holberton.h"
-#include <stdio.h>
+#include &lt;stdio.h&gt;
 
-
+/**
+ * main - check the code for Holberton School students.
+ *
+ * Return: Always 0.
+ */
 int main(void)
 {
-    char s[] = "Holberton School!\n";
-    char *p;
+    char str[] = "Holberton School!\n";
+    char *ptr;
 
-    p = string_toupper(s);
-    printf("%s", p);
-    printf("%s", s);
+    ptr = string_toupper(str);
+    printf("%s", ptr);
+    printf("%s", str);
     return (0);
 }
 julien@ubuntu:~/0x06$ gcc -Wall -pedantic -Werror -Wextra 5-main.c 5-string_toupper.c -o 5-string_toupper
-julien@ubuntu:~/0x06$ ./5-string_toupper 
+julien@ubuntu:~/0x06$ ./5-string_toupper
 HOLBERTON SCHOOL!
 HOLBERTON SCHOOL!
-julien@ubuntu:~/0x06$ 
-```
+julien@ubuntu:~/0x06$
+</code></pre>
 
-### 6. Expect the best. Prepare for the worst. Capitalize on what comes 
-*   File: **6-cap_string.c**
+### 6-cap_string.c
 
-*Write a function that capitalizes all words of a string.*
+**<p>Function that capitalizes all words of a string.</p>**
 
-1.  Prototype: char *cap_string(char *);
-2.  Separators of words: space, tabulation, new line, ,, ;, ., !, ?, ", (, ), {, and }
-
-```
-julien@ubuntu:~/0x06$ cat 6-main.c
+<pre><code>julien@ubuntu:~/0x06$ cat 6-main.c
 #include "holberton.h"
-#include <stdio.h>
+#include &lt;stdio.h&gt;
+
+/**
+ * main - check the code for Holberton School students.
+ *
+ * Return: Always 0.
+ */
 int main(void)
 {
-    char s[] = "Expect the best. Prepare for the worst. Capitalize on what comes.\nhello world! hello-world 0123456hello world\thello world.hello world\n";
-    char *p;
+    char str[] = "Expect the best. Prepare for the worst. Capitalize on what comes.\nhello world! hello-world 0123456hello world\thello world.hello world\n";
+    char *ptr;
 
-    p = cap_string(s);
-    printf("%s", p);
-    printf("%s", s);
+    ptr = cap_string(str);
+    printf("%s", ptr);
+    printf("%s", str);
     return (0);
 }
 julien@ubuntu:~/0x06$ gcc -Wall -pedantic -Werror -Wextra 6-main.c 6-cap_string.c -o 6-cap
-julien@ubuntu:~/0x06$ ./6-cap 
+julien@ubuntu:~/0x06$ ./6-cap
 Expect The Best. Prepare For The Worst. Capitalize On What Comes.
 Hello World! Hello-world 0123456hello World Hello World.Hello World
 Expect The Best. Prepare For The Worst. Capitalize On What Comes.
 Hello World! Hello-world 0123456hello World Hello World.Hello World
-julien@ubuntu:~/0x06$ 
-```
+julien@ubuntu:~/0x06$
+</code></pre>
 
+### 7-leet.c
 
-### 7. Mozart composed his music not for the elite, but for everybody mandatory
-*   File: **7-leet.c** 
+**<p>Function that encodes a string into <a href="/rltoken/HDZQ5imXboSDnMXO9P0-Tg" title="1337" target="_blank">1337</a>.</p>**
 
-*Write a function that encodes a string into 1337.*
-
-1.  Letters a and A should be replaced by 4
-2.  Letters e and E should be replaced by 3
-3.  Letters o and O should be replaced by 0
-4.  Letters t and T should be replaced by 7
-5.  Letters l and L should be replaced by 1
-6.  Prototype: char *leet(char *);
-7.  You can only use one if in your code
-8.  You can only use two loops in your code
-9.  You are not allowed to use switch
-10.  You are not allowed to use any ternary operation
-
-```
-julien@ubuntu:~/0x06$ cat 7-main.c
+<pre><code>julien@ubuntu:~/0x06$ cat 7-main.c
 #include "holberton.h"
-#include <stdio.h>
+#include &lt;stdio.h&gt;
+
+/**
+ * main - check the code for Holberton School students.
+ *
+ * Return: Always 0.
+ */
 int main(void)
 {
     char s[] = "Expect the best. Prepare for the worst. Capitalize on what comes.\n";
@@ -348,26 +354,25 @@ int main(void)
     return (0);
 }
 julien@ubuntu:~/0x06$ gcc -Wall -pedantic -Werror -Wextra 7-main.c 7-leet.c -o 7-1337
-julien@ubuntu:~/0x06$ ./7-1337 
+julien@ubuntu:~/0x06$ ./7-1337
 3xp3c7 7h3 b3s7. Pr3p4r3 f0r 7h3 w0rs7. C4pi741iz3 0n wh47 c0m3s.
 3xp3c7 7h3 b3s7. Pr3p4r3 f0r 7h3 w0rs7. C4pi741iz3 0n wh47 c0m3s.
-julien@ubuntu:~/0x06$ 
-```
+julien@ubuntu:~/0x06$
+</code></pre>
 
-### 8. rot13 
-*   File: **8-rot13.c**
+### 8-rot13.c
 
-*Write a function that encodes a string using rot13.*
+**<p>Function that encodes a string using <a href="/rltoken/IFaBd0QrK-h50gV7IoW9iQ" title="rot13" target="_blank">rot13</a>.</p>**
 
-1.  Prototype: char *rot13(char *);
-2.  You can only use if statement once in your code
-3.  You can only use two loops in your code
-4.  You are not allowed to use switch
-5.  You are not allowed to use any ternary operation
-
-```
+<pre><code>julien@ubuntu:~/0x06$ cat 8-main.c
 #include "holberton.h"
-#include <stdio.h>
+#include &lt;stdio.h&gt;
+
+/**
+ * main - check the code for Holberton School students.
+ *
+ * Return: Always 0.
+ */
 int main(void)
 {
     char s[] = "ROT13 (\"rotate by 13 places\", sometimes hyphenated ROT-13) is a simple letter substitution cipher.\n";
@@ -390,7 +395,7 @@ int main(void)
     return (0);
 }
 julien@ubuntu:~/0x06$ gcc -Wall -pedantic -Werror -Wextra 8-main.c 8-rot13.c -o 8-rot13
-julien@ubuntu:~/0x06$ ./8-rot13 
+julien@ubuntu:~/0x06$ ./8-rot13
 EBG13 ("ebgngr ol 13 cynprf", fbzrgvzrf ulcurangrq EBG-13) vf n fvzcyr yrggre fhofgvghgvba pvcure.
 ------------------------------------
 EBG13 ("ebgngr ol 13 cynprf", fbzrgvzrf ulcurangrq EBG-13) vf n fvzcyr yrggre fhofgvghgvba pvcure.
@@ -402,21 +407,14 @@ ROT13 ("rotate by 13 places", sometimes hyphenated ROT-13) is a simple letter su
 EBG13 ("ebgngr ol 13 cynprf", fbzrgvzrf ulcurangrq EBG-13) vf n fvzcyr yrggre fhofgvghgvba pvcure.
 ------------------------------------
 EBG13 ("ebgngr ol 13 cynprf", fbzrgvzrf ulcurangrq EBG-13) vf n fvzcyr yrggre fhofgvghgvba pvcure.
-julien@ubuntu:~/0x06$ 
-```
+julien@ubuntu:~/0x06$
+</code></pre>
 
-###  9. Numbers have life; they're not just symbols on paper  
-*   File: **100-print_number.c**
+### 100-print_number.c
 
-*Write a function that prints an integer.*
+**<p>Function that prints an integer.</p>**
 
-Prototype: void print_number(int n);
-You can only use _putchar function to print
-You are not allowed to use long
-You are not allowed to use arrays or pointers
-You are not allowed to hard-code special values
-
-```
+<pre><code>julien@ubuntu:~/0x06$ cat 100-main.c
 #include "holberton.h"
 
 /**
@@ -439,11 +437,20 @@ int main(void)
     return (0);
 }
 julien@ubuntu:~/0x06$ gcc -Wall -pedantic -Werror -Wextra _putchar.c 100-main.c 100-print_number.c -o 100-print_numbers
-julien@ubuntu:~/0x06$ ./100-print_numbers 
+julien@ubuntu:~/0x06$ ./100-print_numbers
 98
 402
 1024
 0
 -98
-julien@ubuntu:~/0x06$ 
-```
+julien@ubuntu:~/0x06$
+</code></pre>
+
+### 101-magic.c
+
+**<p><img src="https//holbertonintranet.s3.amazonaws.com/uploads/medias/2020/9/21b4fc5c1b5df84e6ae4fe8807aa359d929e748a.gif?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIARDDGGGOUWMNL5ANN%2F20210328%2Fus-east-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20210328T161304Z&amp;X-Amz-Expires=86400&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Signature=9295ed3246093135b6175ae5ea4f038e15ab1b9a41f0b1d11c1a2e2b3024d122" alt="" style="">
+<br><br>
+Add one line to <a href="https//github.com/holbertonschool/make_magic_happen/blob/master/magic.c" title="this code" target="_blank">this code</a>, so that the program prints <code>a[2] = 98</code>, followed by a new line.</p>**
+
+None
+

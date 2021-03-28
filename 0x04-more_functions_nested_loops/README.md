@@ -1,59 +1,51 @@
-0x04. C - More functions, more nested loops
-In this directory you will see more functions and more nested loops
+# 0x04. C - More functions, more nested loops
 
-## GENERAL:
+## GENERAL :open_book::open_book::open_book::
 
-1.  What are nested loops and how to use them
-2.  What is a function and how do you use functions
-3.  What is the difference between a declaration and a definition of a function
-4.  What is a prototype
-5.  Scope of variables
-6.  What are the gcc flags -Wall -Werror -pedantic -Wextra
-7.  What are header files and how to to use them with #include
+ <ol>
+	<li>What are nested loops and how to use them</li>
+	<li>What is a function and how do you use functions</li>
+	<li>What is the difference between a declaration and a definition of a function</li>
+	<li>What is a prototype</li>
+	<li>Scope of variables</li>
+	<li>What are the <code>gcc</code> flags <code>-Wall -Werror -pedantic -Wextra</code></li>
+	<li>What are header files and how to to use them with <code>#include</code></li>
+</ol>
 
+## RESOURCES:
 
-## Read or watch:
+ <ol>
+	<li><a href="/rltoken/3WXPpZkwBEt_9MOlayYGWw" title="Nested while loops" target="_blank">Nested while loops</a> </li>
+	<li><a href="/rltoken/ES8eagOrYppE4qSjaa4zQA" title="C - Functions" target="_blank">C - Functions</a> </li>
+	<li><a href="/rltoken/X8cL-h23A-vdFyuRmomKQQ" title="Learning to Program in C (Part 06)" target="_blank">Learning to Program in C (Part 06)</a> (<em>stop at 14:00</em>)</li>
+	<li><a href="/rltoken/IAfwYbkv3JHqttvqlnz0Bw" title="What is the purpose of a function prototype?" target="_blank">What is the purpose of a function prototype?</a> </li>
+	<li><a href="/rltoken/QvgB8JXWlTL_yqsUD-3-ag" title="C - Header Files" target="_blank">C - Header Files</a> (<em>stop before the “Once-Only Headers” paragraph</em>)</li>
+</ol>
 
-1.  **[Nested while loops:](https://www.youtube.com/watch?v=Z3iGeQ1gIss)**
-2.  **[C - Functions:](https://www.tutorialspoint.com/cprogramming/c_functions.htm)**
-3.  **[Learning to Program in C (Part 06) (stop at 14:00):](https://www.youtube.com/watch?v=qMlnFwYdqIw)**
-4.  **[What is the purpose of a function prototype?:](https://www.geeksforgeeks.org/what-is-the-purpose-of-a-function-prototype/)**
-5.  **[C - Header Files (stop before the “Once-Only Headers” paragraph):](https://www.tutorialspoint.com/cprogramming/c_header_files.htm)**
+## INTRODUCTION TO FILES :closed_book::closed_book::closed_book::
 
-## Files:
+0.	[**0-isupper.c**:](#0-isupperc) Function that checks for uppercase character.FYI The standard library provides a similar function <code>isupper</code>. Run <code>man isupper</code> to learn more.
+1.	[**1-isdigit.c**:](#1-isdigitc) Function that checks for a digit (<code>0</code> through <code>9</code>).FYI The standard library provides a similar function isdigit. Run man isdigit to learn more.
+2.	[**2-mul.c**:](#2-mulc) Function that multiplies two integers.
+3.	[**3-print_numbers.c**:](#3-print_numbersc) Function that prints the numbers, from <code>0</code> to <code>9</code>, followed by a new line.
+4.	[**4-print_most_numbers.c**:](#4-print_most_numbersc) Function that prints the numbers, from <code>0</code> to <code>9</code>, followed by a new line.
+5.	[**5-more_numbers.c**:](#5-more_numbersc) Function that prints 10 times the numbers, from <code>0</code> to <code>14</code>, followed by a new line.
+6.	[**6-print_line.c**:](#6-print_linec) Function that draws a straight line in the terminal.
+7.	[**8-print_square.c**:](#8-print_squarec) Function that prints a square, followed by a new line.
+8.	[**9-fizz_buzz.c**:](#9-fizz_buzzc) The “Fizz-Buzz test” is an interview question designed to help filter out the 99.5% of programming job candidates who can’t seem to program their way out of a wet paper bag.program that prints the numbers from <code>1</code> to <code>100</code>, followed by a new line. But for multiples of three print <code>Fizz</code> instead of the number and for the multiples of five print <code>Buzz</code>. For numbers which are multiples of both three and five print <code>FizzBuzz</code>.
+9.	[**10-print_triangle.c**:](#10-print_trianglec) Function that prints a triangle, followed by a new line.
+10.	[**100-prime_factor.c**:](#100-prime_factorc) The prime factors of <code>1231952</code> are <code>2</code>, <code>2</code>, <code>2</code>, <code>2</code>, <code>37</code> and <code>2081</code>. program that finds and prints the largest prime factor of the number <code>612852475143</code>, followed by a new line.
+11.	[**101-print_number.c**:](#101-print_numberc) Function that prints an integer.
 
-1.  **0-isupper.c**
-2.  **1-isdigit.c**
-3.  **2-mul.c**
-4.  **3-print_numbers.c**
-5.  **4-print_most_numbers.c**
-6.  **5-more_numbers.c**
-7.  **6-print_line.c**
-8.  **7-print_diagonal.c**
-9.  **8-print_square.c**
-10.  **9-fizz_buzz.c**
-12.  **10-print_triangle.c**
-13.  **100-prime_factor.c**
-14.  **100-prime_factor.c**
+## FILES :bookmark_tabs::bookmark_tabs::bookmark_tabs::
 
+### 0-isupper.c
 
-## Tasks
+**<p>Function that checks for uppercase character.</p><p>FYI The standard library provides a similar function <code>isupper</code>. Run <code>man isupper</code> to learn more.</p>**
 
-### 0. isupper 
-*   File: **0-isupper.c**
-
-*Write a function that checks for uppercase character.*
-
-1.  Prototype: int _isupper(int c);
-2.  Returns 1 if c is uppercase
-3.  Returns 0 otherwise
-
-Example:
-
-```
-julien@ubuntu:~/0x04$ cat 0-main.c
+<pre><code>julien@ubuntu:~/0x04$ cat 0-main.c
 #include "holberton.h"
-#include <stdio.h>
+#include &lt;stdio.h&gt;
 
 /**
  * main - check the code for Holberton School students.
@@ -75,21 +67,15 @@ julien@ubuntu:~/0x04$ ./0-isuper
 A: 1
 a: 0
 julien@ubuntu:~/0x04$ 
-```
+</code></pre>
 
-### 1. isdigit 
-*   File: **1-isdigit.c**
+### 1-isdigit.c
 
-*Write a function that checks for a digit (0 through 9).*
+**<p>Function that checks for a digit (<code>0</code> through <code>9</code>).</p><p>FYI The standard library provides a similar function isdigit. Run man isdigit to learn more.</p>**
 
-1.  Prototype: int _isdigit(int c);
-2.  Returns 1 if c is a digit
-3.  Returns 0 otherwise
-
-```
-julien@ubuntu:~/0x04$ cat 0-main.c
+<pre><code>julien@ubuntu:~/0x04$ cat 1-main.c 
 #include "holberton.h"
-#include <stdio.h>
+#include &lt;stdio.h&gt;
 
 /**
  * main - check the code for Holberton School students.
@@ -100,30 +86,26 @@ int main(void)
 {
     char c;
 
-    c = 'A';
-    printf("%c: %d\n", c, _isupper(c));
+    c = '0';
+    printf("%c: %d\n", c, _isdigit(c));
     c = 'a';
-    printf("%c: %d\n", c, _isupper(c));
+    printf("%c: %d\n", c, _isdigit(c));
     return (0);
 }
-julien@ubuntu:~/0x04$ gcc -Wall -pedantic -Werror -Wextra 0-main.c 0-isupper.c -o 0-isuper
-julien@ubuntu:~/0x04$ ./0-isuper 
-A: 1
+julien@ubuntu:~/0x04$ gcc -Wall -pedantic -Werror -Wextra 1-main.c 1-isdigit.c -o 1-isdigit
+julien@ubuntu:~/0x04$ ./1-isdigit 
+0: 1
 a: 0
 julien@ubuntu:~/0x04$ 
-```
+</code></pre>
 
-###  2. Collaboration is multiplication 
-*   File: **2-mul.c**
+### 2-mul.c
 
-*Write a function that multiplies two integers.*
+**<p>Function that multiplies two integers.</p>**
 
-1.    Prototype: int mul(int a, int b);
-
-```
-julien@ubuntu:~/0x04$ cat 2-main.c
+<pre><code>julien@ubuntu:~/0x04$ cat 2-main.c
 #include "holberton.h"
-#include <stdio.h>
+#include &lt;stdio.h&gt;
 
 /**
  * main - check the code for Holberton School students.
@@ -141,18 +123,13 @@ julien@ubuntu:~/0x04$ ./2-mul
 100352
 -1646592
 julien@ubuntu:~/0x04$ 
-```
+</code></pre>
 
-###  3. The numbers speak for themselves
-*   File: **3-print_numbers.c**
+### 3-print_numbers.c
 
-*Write a function that prints the numbers, from 0 to 9, followed by a new line.*
+**<p>Function that prints the numbers, from <code>0</code> to <code>9</code>, followed by a new line.</p>**
 
-1.  Prototype: void print_numbers(void);
-2.  You can only use _putchar twice in your code
-
-```
-julien@ubuntu:~/0x04$ cat 3-main.c 
+<pre><code>julien@ubuntu:~/0x04$ cat 3-main.c 
 #include "holberton.h"
 
 /**
@@ -169,19 +146,13 @@ julien@ubuntu:~/0x04$ gcc -Wall -pedantic -Werror -Wextra _putchar.c 3-main.c 3-
 julien@ubuntu:~/0x04$ ./3-print_numbers | cat -e
 0123456789$
 julien@ubuntu:~/0x04$ 
-```
+</code></pre>
 
-###  4. I believe in numbers and signs
-*   File: **4-print_most_numbers.c**
+### 4-print_most_numbers.c
 
-*Write a function that prints the numbers, from 0 to 9, followed by a new line.*
+**<p>Function that prints the numbers, from <code>0</code> to <code>9</code>, followed by a new line.</p>**
 
-1.  Prototype: void print_most_numbers(void);
-2.  Do not print 2 and 4
-3.  You can only use _putchar twice in your code
-
-```
-julien@ubuntu:~/0x04$ cat 4-main.c
+<pre><code>julien@ubuntu:~/0x04$ cat 4-main.c
 #include "holberton.h"
 
 /**
@@ -198,18 +169,13 @@ julien@ubuntu:~/0x04$ gcc -Wall -pedantic -Werror -Wextra _putchar.c 4-main.c 4-
 julien@ubuntu:~/0x04$ ./4-print_most_numbers 
 01356789
 julien@ubuntu:~/0x04$ 
-```
+</code></pre>
 
-###   5. Numbers constitute the only universal language 
-* File: **5-more_numbers.c**
+### 5-more_numbers.c
 
-*Write a function that prints 10 times the numbers, from 0 to 14, followed by a new line.*
+**<p>Function that prints 10 times the numbers, from <code>0</code> to <code>14</code>, followed by a new line.</p>**
 
-1.  Prototype: void more_numbers(void);
-2.  You can only use _putchar three times in your code
-
-```
-julien@ubuntu:~/0x04$ cat 5-main.c
+<pre><code>julien@ubuntu:~/0x04$ cat 5-main.c
 #include "holberton.h"
 
 /**
@@ -235,21 +201,13 @@ julien@ubuntu:~/0x04$ ./5-more_numbers
 01234567891011121314
 01234567891011121314
 julien@ubuntu:~/0x04
-```
+</code></pre>
 
-### 6. The shortest distance between two points is a straight line
-*   File: **6-print_line.c**
+### 6-print_line.c
 
-*Write a function that draws a straight line in the terminal.*
+**<p>Function that draws a straight line in the terminal.</p>**
 
-1.  Prototype: void print_line(int n);
-2.  You can only use _putchar function to print
-3.  Where n is the number of times the character _ should be printed
-4.  The line should end with a \n
-5.  If n is 0 or less, the function should only print \n
-
-```
-julien@ubuntu:~/0x04$ cat 6-main.c
+<pre><code>julien@ubuntu:~/0x04$ cat 6-main.c
 #include "holberton.h"
 
 /**
@@ -272,69 +230,13 @@ __$
 __________$
 $
 julien@ubuntu:~/0x04$ 
-```
+</code></pre>
 
+### 8-print_square.c
 
-### 7. I feel like I am diagonally parked in a parallel universe
-*   File: **7-print_diagonal.c** 
+**<p>Function that prints a square, followed by a new line.</p>**
 
-*Write a function that draws a diagonal line on the terminal.*
-
-1.  Prototype: void print_diagonal(int n);
-2.  You can only use _putchar function to print
-3.  Where n is the number of times the character \ should be printed
-4.  The diagonal should end with a \n
-5.  If n is 0 or less, the function should only print a \n
-
-```
-julien@ubuntu:~/0x04$ cat 7-main.c
-#include "holberton.h"
-
-/**
- * main - check the code for Holberton School students.
- *
- * Return: Always 0.
- */
-int main(void)
-{
-    print_diagonal(0);
-    print_diagonal(2);
-    print_diagonal(10);
-    print_diagonal(-4);
-    return (0);
-}
-julien@ubuntu:~/0x04$ gcc -Wall -pedantic -Werror -Wextra _putchar.c 7-main.c 7-print_diagonal.c -o 7-diagonals
-julien@ubuntu:~/0x04$ ./7-diagonals | cat -e
-$
-\$
- \$
-\$
- \$
-  \$
-   \$
-    \$
-     \$
-      \$
-       \$
-        \$
-         \$
-$
-julien@ubuntu:~/0x04$ 
-```
-
-### 8. You are so much sunshine in every square inch
-*   File: **8-print_square.c**
-
-*Write a function that prints a square, followed by a new line.*
-
-1.  Prototype: void print_square(int size);
-2.  You can only use _putchar function to print
-3.  Where size is the size of the square
-4.  If size is 0 or less, the function should print only a new line
-5.  Use the character # to print the square
-
-```
-julien@ubuntu:~/0x04$ cat 8-main.c 
+<pre><code>julien@ubuntu:~/0x04$ cat 8-main.c 
 #include "holberton.h"
 
 /**
@@ -366,38 +268,23 @@ julien@ubuntu:~/0x04$ ./8-squares
 ##########
 
 julien@ubuntu:~/0x04$ 
-```
+</code></pre>
 
-###  9. Fizz-Buzz 
-*   File: **9-fizz_buzz.c**
+### 9-fizz_buzz.c
 
-*The “Fizz-Buzz test” is an interview question designed to help filter out the 99.5% of programming job candidates who can’t seem to program their way out of a wet paper bag.
+**<p>The “Fizz-Buzz test” is an interview question designed to help filter out the 99.5% of programming job candidates who can’t seem to program their way out of a wet paper bag.</p><p>program that prints the numbers from <code>1</code> to <code>100</code>, followed by a new line. But for multiples of three print <code>Fizz</code> instead of the number and for the multiples of five print <code>Buzz</code>. For numbers which are multiples of both three and five print <code>FizzBuzz</code>.</p>**
 
-Write a program that prints the numbers from 1 to 100, followed by a new line. But for multiples of three print Fizz instead of the number and for the multiples of five print Buzz. For numbers which are multiples of both three and five print FizzBuzz.*
-
-1.  Each number or word should be separated by a space
-2.  You are allowed to use the standard library
-
-```
-julien@ubuntu:~/0x04$ gcc -Wall -pedantic -Werror -Wextra 9-fizz_buzz.c -o 9-fizz_buzz
+<pre><code>julien@ubuntu:~/0x04$ gcc -Wall -pedantic -Werror -Wextra 9-fizz_buzz.c -o 9-fizz_buzz
 julien@ubuntu:~/0x04$ ./9-fizz_buzz 
 1 2 Fizz 4 Buzz Fizz 7 8 Fizz Buzz 11 Fizz 13 14 FizzBuzz 16 17 Fizz 19 Buzz Fizz 22 23 Fizz Buzz 26 Fizz 28 29 FizzBuzz 31 32 Fizz 34 Buzz Fizz 37 38 Fizz Buzz 41 Fizz 43 44 FizzBuzz 46 47 Fizz 49 Buzz Fizz 52 53 Fizz Buzz 56 Fizz 58 59 FizzBuzz 61 62 Fizz 64 Buzz Fizz 67 68 Fizz Buzz 71 Fizz 73 74 FizzBuzz 76 77 Fizz 79 Buzz Fizz 82 83 Fizz Buzz 86 Fizz 88 89 FizzBuzz 91 92 Fizz 94 Buzz Fizz 97 98 Fizz Buzz
 julien@ubuntu:~/0x04$ 
-```
+</code></pre>
 
-### 10. Triangles 
-*   File: **10-print_triangle.c**
+### 10-print_triangle.c
 
-*Write a function that prints a triangle, followed by a new line.* 
+**<p>Function that prints a triangle, followed by a new line.</p>**
 
-1.  Prototype: void print_triangle(int size);
-2.  You can only use _putchar function to print
-3.  Where size is the size of the triangle
-4.  If size is 0 or less, the function should print only a new line
-5.  Use the character # to print the triangle  
-
-```
-julien@ubuntu:~/0x04$ cat 10-main.c 
+<pre><code>julien@ubuntu:~/0x04$ cat 10-main.c 
 #include "holberton.h"
 
 /**
@@ -445,50 +332,19 @@ julien@ubuntu:~/0x04$ ./10-triangles | tr ' ' . | cat -e
 #$
 $
 julien@ubuntu:~/0x04$
-```
+</code></pre>
 
+### 100-prime_factor.c
 
-## Tasks
+**<p>The prime factors of <code>1231952</code> are <code>2</code>, <code>2</code>, <code>2</code>, <code>2</code>, <code>37</code> and <code>2081</code>. </p><p>program that finds and prints the largest prime factor of the number <code>612852475143</code>, followed by a new line.</p>**
 
-### 11. The problem of distinguishing prime numbers from composite numbers and of resolving the latter into their prime factors is known to be one of the most important and useful in arithmetic 
+None
 
-*   File: **100-prime_factor.c**
+### 101-print_number.c
 
-*The prime factors of 1231952 are 2, 2, 2, 2, 37 and 2081.
+**<p>Function that prints an integer.</p>**
 
-Write a program that finds and prints the largest prime factor of the number 612852475143, followed by a new line.*
-
-1.  You are allowed to use the standard library
-2.  Your program will be compiled with this command: gcc -Wall -pedantic -Werror -Wextra 100-prime_factor.c -o 100-prime_factor -lm
-
-Example:
-
-```
-functions_nested_loops$ gcc -o execute 100-prime_factor.c
-vagrant@vagrant-ubuntu-trusty-64:~/holbertonschool-low_level_programming/0x04-more_functions_nested_loops$ ./execute
-50829599
-vagrant@vagrant-ubuntu-trusty-64:~/holbertonschool-low_level_programming/0x04-more_functions_nested_loops$
-```
-
-
-## Tasks
-
-### 12. Numbers have life; they're not just symbols on paper 
-
-*   File: **101-print_number.c**
-
-*Write a function that prints an integer.*
-
-1.  Prototype: void print_number(int n);
-2.  You can only use _putchar function to print
-3.  You are not allowed to use long
-4.  You are not allowed to use arrays or pointers
-5.  You are not allowed to hard-code special values
-
-Example:
-
-```
-julien@ubuntu:~/0x04$ cat 101-main.c
+<pre><code>julien@ubuntu:~/0x04$ cat 101-main.c
 #include "holberton.h"
 
 /**
@@ -518,4 +374,5 @@ julien@ubuntu:~/0x04$ ./101-print_numbers
 0
 -98
 julien@ubuntu:~/0x04$ 
-```
+</code></pre>
+
