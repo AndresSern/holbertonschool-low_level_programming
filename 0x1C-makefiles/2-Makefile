@@ -1,7 +1,8 @@
 #Declartion of variables 
-CC =gcc
+
+CC=gcc
 SRC=holberton.c main.c
-OBJ=$(SRC:%.c=%.o)
+OBJ=$(SRC:.c=.o)
 NAME=holberton
 
 all: $(OBJ)
