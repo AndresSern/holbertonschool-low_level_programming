@@ -8,8 +8,6 @@ This module that returns the perimeter of the island describ in grid
 def island_perimeter(grid):
     """ THis functions returns the
         perimeter of the island described in grid """
-    len_verti = len(grid)
-    len_Hori = len(grid[0])
     perimeter = 0
     for i, row in enumerate(grid):
         for j, col in enumerate(row):
