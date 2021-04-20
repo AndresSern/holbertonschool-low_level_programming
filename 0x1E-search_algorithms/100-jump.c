@@ -1,4 +1,5 @@
 #include "search_algos.h"
+#include <math.h>
 /**
  * jump_search - function that searches for a value in a sorted array of
  *                 integers using the Binary search algorithm
@@ -37,14 +38,13 @@ int jump_search(int *array, size_t size, int value)
 					return (i);
 				if (array[i] > value)
 					return (-1);
-
 				if (i == size || i == high)
 					return (-1);
 				i++;
 			}
 		}
 		low = high;
-		high = high + 3;
+		high = high + sqrt(size);
 	}
 	return (-1);
 }
