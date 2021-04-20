@@ -1,0 +1,64 @@
+#include "search_algos.h"
+
+int recursion(int *array, size_t low, size_t high, int value);
+void printArray(int *array, size_t mid, size_t high);
+
+/**
+ * advanced_binary - function that searches for a value in a sorted array of
+ *                  integers using the Exponential search algorithm
+ *
+ * @array:  is a pointer to the first element of the array to search in
+ * @size:   is the number of elements in array
+ * @value:  is the value to search for
+ *
+ * Return:  Must return the index where value is located
+ *          If value is not present in array or if array is NULL,
+ *          your function must return -1
+ */
+
+
+int advanced_binary(int *array, size_t size, int value)
+{
+	if (array == NULL)
+		return -1;
+	printArray(array, 0, size - 1);
+
+	return recursion(array, 0, size - 1, value);
+}
+
+int recursion(int *array, size_t low, size_t high, int value)
+{
+	size_t mid = 0;
+	if (high >= low)
+	{
+		mid =  (low + high) / 2;
+		printArray(array, mid, high);
+		if (array[mid] ==  value)
+			return mid;
+
+		if (array[mid] < value)
+			return recursion(array, mid + 1, high, value );
+
+		return recursion(array, low, mid - 1, value );
+	}
+	return (-1);
+}
+
+void printArray(int *array, size_t mid, size_t high)
+{
+	size_t i = 0;
+
+	for (i = mid; i < high; i++)
+	{	
+		if (i == (mid ))
+			printf("Searching in array: ");
+
+		printf("%d",array[i]);
+
+		if (i < (high - 1))	
+			printf(", ");
+
+		if (i == (high - 1 ))
+			printf("\n");
+	}
+}

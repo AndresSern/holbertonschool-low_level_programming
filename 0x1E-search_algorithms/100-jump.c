@@ -12,7 +12,41 @@
  *          If value is not present in array or if array is NULL,
  *          your function must return -1
  */
+int jumpSearch(int array[], int x, int n)
+{
+    // Finding block size to be jumped
+    int step = sqrt(n);
+ 
+    // Finding the block where element is
+    // present (if it is present)
+    int prev = 0;
+    while (array[min(step, n)-1] < x)
+    {
+        prev = step;
+        step += sqrt(n);
+        if (prev >= n)
+            return -1;
+    }
+ 
+    // Doing a linear search for x in block
+    // beginning with prev.
+    while (array[prev] < x)
+    {
+        prev++;
+ 
+        // If we reached next block or end of
+        // arrayay, element is not present.
+        if (prev == min(step, n))
+            return -1;
+    }
+    // If element is found
+    if (array[prev] == x)
+        return prev;
+ 
+    return -1;
+}
 
+/*
 int jump_search(int *array, size_t size, int value)
 {
 	size_t low = 0, high = sqrt(size);
@@ -46,4 +80,4 @@ int jump_search(int *array, size_t size, int value)
 		high = high + sqrt(size);
 	}
 	return (-1);
-}
+}*/
