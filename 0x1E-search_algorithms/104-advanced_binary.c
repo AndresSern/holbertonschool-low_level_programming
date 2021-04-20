@@ -46,9 +46,14 @@ int recursion(int *array, size_t low, size_t high, int value)
 
 	if (high >= low)
 	{
-		mid =  (low + high) / 2;
+		mid = low + (high - low) / 2;
 		printArray(array, mid, high);
-		if (array[mid] ==  value)
+
+		if (array[mid - 1] == value)
+			return (mid - 1);
+		else if (array[mid + 1] == value)
+			return (mid + 1);
+		else if (array[mid] == value)
 			return (mid);
 
 		if (array[mid] < value)
@@ -58,7 +63,6 @@ int recursion(int *array, size_t low, size_t high, int value)
 	}
 	return (-1);
 }
-
 /**
  * printArray - function that print an array
  *
