@@ -1,14 +1,15 @@
 #include "search_algos.h"
+
 /**
- * binary_search - function that searches for a value in a sorted array of 
- *                 integers using the Binary search algorithm
+ * interpolation_search - Function that searches for a value in a sorted array
+ *                        of integers using the Interpolation search algorithm
  *
  * @array:  is a pointer to the first element of the array to search in
  * @size:   is the number of elements in array
  * @value:  is the value to search for
  *
- * Return:  Must return the index where value is located 
- *          If value is not present in array or if array is NULL, 
+ * Return:  Must return the index where value is located
+ *          If value is not present in array or if array is NULL,
  *          your function must return -1
  */
 
@@ -19,15 +20,15 @@ int interpolation_search(int *array, size_t size, int value)
 	if (array == NULL)
 		return (-1);
 
-	while (((start <= (size - 1)) && (end <= (size -1))))
+	while (((start <= (size - 1)) && (end <= (size - 1))))
 	{
-		pos = (start + ((value - array[start] ) * (end - start)) 
-			        / (array[end] - array[start]));
+		pos = (start + ((value - array[start]) * (end - start))
+			/ (array[end] - array[start]));
 
 		if (pos > (size - 1))
 		{
 			printf("Value checked array[%zu] is out of range\n", pos);
-			return -1;
+			return (-1);
 		}
 		printf("Value checked array[%zu] = [%d]\n", pos, array[pos]);
 
