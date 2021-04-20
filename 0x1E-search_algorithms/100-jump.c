@@ -1,21 +1,46 @@
-#include <stdio.h>
-#include <stdlib.h>
 #include "search_algos.h"
-
 /**
- * main - Entry point
+ * binary_search - function that searches for a value in a sorted array of 
+ *                 integers using the Binary search algorithm
  *
- * Return: Always EXIT_SUCCESS
+ * @array:  is a pointer to the first element of the array to search in
+ * @size:   is the number of elements in array
+ * @value:  is the value to search for
+ *
+ * Return:  Must return the index where value is located 
+ *          If value is not present in array or if array is NULL, 
+ *          your function must return -1
  */
-int main(void)
+int jump_search(int *array, size_t size, int value)
 {
-    int array[] = {
-        0, 1, 2, 3, 4, 5, 6, 7, 8, 9
-    };
-    size_t size = sizeof(array) / sizeof(array[0]);
+	size_t low = 0, i = 0, high = 3;
+	size = size - 1;
+	while (high <= size || low <= size)
+	{
+		printf("Value checked array[%zu] = [%zu]\n", low, low);  
 
-    printf("Found %d at index: %d\n\n", 2, binary_search(array, size, 2));
-    printf("Found %d at index: %d\n\n", 5, binary_search(array, 5, 5));
-    printf("Found %d at index: %d\n", 999, binary_search(array, size, 999));
-    return (EXIT_SUCCESS);
+		if (value <= array[high] || high > size)
+		{
+
+			printf("Value found between indexes [%zu] and [%zu]\n",
+				low, high);
+			i = low;
+			while(i <= size || i <= high)
+			{
+				
+				printf("Value checked array[%zu] = [%d]\n", i, 
+					array[i]);
+
+				if (array[i] == value)
+					return (i);
+
+				if (i == size || i == high)
+					return (-1);
+				i++;
+			}
+		}
+		low = high;
+		high = high + 3;
+	}
+	return (-1);
 }
