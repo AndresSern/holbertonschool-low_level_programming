@@ -19,7 +19,7 @@ void printArray(int *array, size_t mid, size_t high);
 
 int advanced_binary(int *array, size_t size, int value)
 {
-	if (array == NULL)
+	if (array == NULL || size == 0)
 		return (-1);
 	return (recursion(array, 0, size - 1, value));
 }
@@ -42,23 +42,15 @@ int recursion(int *array, size_t low, size_t high, int value)
 {
 	size_t mid = 0;
 
-	if (array == NULL)
-		return (-1);
-
-	printArray(array, low, high);
 	if (high > low)
 	{
 		mid = (high + low) / 2;
+		printArray(array, low, high);
 		if (array[mid] == value)
 		{
 			if (array[mid - 1] == value)
 			{
 				return (recursion(array, low, mid, value));
-				return (mid);
-			}
-			else if (array[mid + 1] == value)
-			{
-				return (mid);
 			}
 			return (mid);
 		}
