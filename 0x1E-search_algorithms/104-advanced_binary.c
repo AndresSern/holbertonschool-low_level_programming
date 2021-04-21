@@ -44,7 +44,7 @@ int recursion(int *array, size_t low, size_t high, int value)
 	size_t mayor = 9;
 
 	printArray(array, low, high);
-	if (high >= low && high <= mayor)
+	if (high > low && high <= mayor)
 	{
 		mid = (high + low) / 2;
 		if (array[mid] == value)
