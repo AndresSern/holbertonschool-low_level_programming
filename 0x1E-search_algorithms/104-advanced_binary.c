@@ -21,8 +21,6 @@ int advanced_binary(int *array, size_t size, int value)
 {
 	if (array == NULL)
 		return (-1);
-	printArray(array, 0, size - 1);
-
 	return (recursion(array, 0, size - 1, value));
 }
 
@@ -44,17 +42,23 @@ int recursion(int *array, size_t low, size_t high, int value)
 {
 	size_t mid = 0;
 
+	printArray(array, low, high);
 	if (high >= low)
 	{
-		mid = low + (high - low) / 2;
-		printArray(array, mid, high);
+		mid = (high + low) / 2;
 
-		if (array[mid - 1] == value)
-			return (mid - 1);
-		else if (array[mid + 1] == value)
-			return (mid + 1);
-		else if (array[mid] == value)
-			return (mid);
+		if (array[mid] == value)
+		{
+			if (array[mid - 1] == value)
+			{
+				return (recursion(array, low, mid, value));
+				return (mid);
+			}
+			else if (array[mid + 1] == value)
+			{
+				return (mid - 1);
+			}
+		}
 
 		if (array[mid] < value)
 			return (recursion(array, mid + 1, high, value));
@@ -75,17 +79,16 @@ void printArray(int *array, size_t mid, size_t high)
 {
 	size_t i = 0;
 
-	for (i = mid; i < high; i++)
+	for (i = mid; i <= high; i++)
 	{
 		if (i == (mid))
 			printf("Searching in array: ");
-
 		printf("%d", array[i]);
 
-		if (i < (high - 1))
+		if (i < high)
 			printf(", ");
 
-		if (i == (high - 1))
+		if (i == (high))
 			printf("\n");
 	}
 }
