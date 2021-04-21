@@ -42,7 +42,7 @@ int recursion(int *array, size_t low, size_t high, int value)
 {
 	size_t mid = 0;
 
-	if (low <= high)
+	if (low < high)
 	{
 		printArray(array, low, high);
 		mid = (high + low) / 2;
