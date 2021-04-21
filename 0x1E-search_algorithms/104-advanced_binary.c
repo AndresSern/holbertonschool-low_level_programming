@@ -40,16 +40,16 @@ int advanced_binary(int *array, size_t size, int value)
  */
 int recursion(int *array, size_t low, size_t high, int value)
 {
-	size_t mid;
+	int mid;
 
 	printArray(array, low, high);
-	if (high >= low)
+	if (high > low )
 	{
 		mid = low + (high - low) / 2;
 		if (array[mid] == value)
 		{
-			if (array[mid - 1] == value)
-				return (recursion(array, low, mid, value));
+			if (mid - 1 >= 0 && array[mid - 1] == value)
+				return (recursion(array, low, mid -1, value));
 			return (mid);
 		}
 		if (array[mid] < value)
