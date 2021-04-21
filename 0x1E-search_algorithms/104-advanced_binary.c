@@ -1,6 +1,6 @@
 #include "search_algos.h"
 
-int recursion(int *array, size_t low, size_t high, int value);
+int recursion(int *array, size_t low, size_t high, size_t size, int value);
 void printArray(int *array, size_t mid, size_t high);
 
 /**
@@ -21,7 +21,7 @@ int advanced_binary(int *array, size_t size, int value)
 {
 	if (array == NULL || size == 0)
 		return (-1);
-	return (recursion(array, 0, size - 1, value));
+	return (recursion(array, 0, size - 1, size - 1, value));
 }
 
 /**
@@ -38,11 +38,11 @@ int advanced_binary(int *array, size_t size, int value)
  *          If value is not present in array or if array is NULL,
  *          your function must return -1
  */
-int recursion(int *array, size_t low, size_t high, int value)
+int recursion(int *array, size_t low, size_t high, size_t size, int value)
 {
 	size_t mid = 0;
 
-	if (low < high)
+	if ((low < high) && (high <= size))
 	{
 		printArray(array, low, high);
 		mid = (high + low) / 2;
@@ -51,9 +51,9 @@ int recursion(int *array, size_t low, size_t high, int value)
 			return (mid);
 		}
 		if (array[mid] < value)
-			return (recursion(array, mid + 1, high, value));
+			return (recursion(array, mid + 1, high, size, value));
 
-		return (recursion(array, low, mid, value));
+		return (recursion(array, low, mid, size, value));
 	}
 	return (-1);
 }
