@@ -42,20 +42,18 @@ int recursion(int *array, size_t low, size_t high, int value)
 {
 	size_t mid = 0;
 
-	if (high > low)
+	if (low <= high)
 	{
 		printArray(array, low, high);
 		mid = (high + low) / 2;
-		if (array[mid] == value)
+		if (array[mid] == value && array[mid - 1] != value)
 		{
-			if (array[mid - 1] == value)
-				return (recursion(array, low, mid, value));
 			return (mid);
 		}
 		if (array[mid] < value)
 			return (recursion(array, mid + 1, high, value));
 
-		return (recursion(array, low, mid - 1, value));
+		return (recursion(array, low, mid, value));
 	}
 	return (-1);
 }
