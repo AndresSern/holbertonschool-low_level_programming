@@ -32,7 +32,6 @@ int advanced_binary(int *array, size_t size, int value)
  * @high:  Is the number of index bigger in the array
  * @size : This is the size of the array
  * @value:  is the value to search for
-   
  * Return:  Must return the index where value is located
  *          If value is not present in array or if array is NULL,
  *          your function must return -1
