@@ -56,7 +56,7 @@ int recursion(int *array, size_t low, size_t high, int value)
 			}
 			else if (array[mid + 1] == value)
 			{
-				return (mid - 1);
+				return (mid);
 			}
 			return (mid);
 		}
