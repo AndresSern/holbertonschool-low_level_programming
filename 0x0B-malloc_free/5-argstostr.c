@@ -55,12 +55,12 @@ char *argstostr(int ac, char **av)
 
 	if (ac == 0 || av == NULL)
 		return (0);
-	for (index = 0; av[index] && index < ac; index++)
+	for (index = 0; index < ac && av[index]; index++)
 	{
 		sumString += _strlen(av[index]);
 	}
 	newString = malloc((sumString * sizeof(char)) + ac);
-	for (index = 0; av[index] && index < ac; index++)
+	for (index = 0; index < ac && av[index]; index++)
 	{
 		newString = _strcat(newString, av[index]);
 		newString = _strcat(newString, "\n");
