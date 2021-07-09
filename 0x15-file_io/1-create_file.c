@@ -10,7 +10,6 @@
 int create_file(const char *filename, char *text_content)
 {
 	int fd;
-	int lenWrite, len_Text;
 
 	if (filename == NULL)
 		return (-1);
@@ -21,6 +20,8 @@ int create_file(const char *filename, char *text_content)
 		return (-1);
 	if (text_content != NULL)
 	{
+		int lenWrite, len_Text;
+
 		for (len_Text = 0; text_content[len_Text] != '\0'; len_Text++)
 			;
 		lenWrite = write(fd, text_content, (len_Text));
