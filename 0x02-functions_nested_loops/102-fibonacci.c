@@ -8,17 +8,18 @@
 
 int main(void)
 {
-	long before, after, fibonnaci;
+	long before, after;
 	int count = 0;
 
 	before = 1;
 	after = 2;
-	printf("%lu, ", before);
-	printf("%lu, ", after);
+	printf("%ld, ", before);
+	printf("%ld, ", after);
 		while (count <= 47)
 		{
+			long fibonnaci;
 			fibonnaci = before + after;
-			printf("%lu", fibonnaci);
+			printf("%ld", fibonnaci);
 			if (count != 47)
 				printf(", ");
 			before = after;
