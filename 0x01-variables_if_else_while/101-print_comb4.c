@@ -7,10 +7,11 @@
 int main(void)
 {
 
-	int count, number1, number2, number3;
+	int count;
 
 	for (count = 12; count < 1000; count++)
 	{
+		int number1, number2, number3;
 		number1 = count / 100;
 		number2 = (count / 10) % 10;
 		number3 = x % 10;
