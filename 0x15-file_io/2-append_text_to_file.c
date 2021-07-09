@@ -15,6 +15,8 @@ int append_text_to_file(const char *filename, char *text_content)
 		return (-1);
 	if (text_content != NULL)
 	{
+		int len_Text, lenWrite;
+
 		for (len_Text = 0; text_content[len_Text] != '\0'; len_Text++)
 			;
 		lenWrite = write(fd, text_content, len_Text);
