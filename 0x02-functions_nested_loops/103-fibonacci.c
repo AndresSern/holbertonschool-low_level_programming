@@ -6,7 +6,7 @@
  */
 int main(void)
 {
-	long before, after, fibonnaci, sum;
+	long before, after, sum;
 	int count = 0;
 
 	before = 1;
@@ -14,6 +14,7 @@ int main(void)
 	sum = 2;
 	while (count <= 29)
 	{
+		long fibonnaci;
 		fibonnaci = before + after;
 		if ((fibonnaci % 2) == 0)
 			sum += fibonnaci;
@@ -21,6 +22,6 @@ int main(void)
 		after = fibonnaci;
 		count++;
 	}
-	printf("%lu\n", sum);
+	printf("%ld\n", sum);
 	return (0);
 }
