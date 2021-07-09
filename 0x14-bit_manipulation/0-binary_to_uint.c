@@ -8,7 +8,6 @@ unsigned int binary_to_uint(const char *b)
 {
 	unsigned int decimal = 0;
 	int multiplicador = 1, index = 0;
-	char currentCharacter;
 
 	if (b == NULL)
 		return (0);
@@ -19,6 +18,8 @@ unsigned int binary_to_uint(const char *b)
 	}
 	for (index = index - 1; index >= 0; index--)
 	{
+		char currentCharacter;
+
 		currentCharacter = b[index];
 		if (currentCharacter == '1')
 		{
