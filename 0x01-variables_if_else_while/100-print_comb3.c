@@ -8,10 +8,11 @@
 */
 int main(void)
 {
-	int digit, first, last, reversed;
+	int digit;
 
 	for (digit = 1; digit < 100; digit++)
 	{
+		int first, last, reversed;
 		first = digit / 10;
 		last = digit % 10;
 		reversed = (last * 10) + first;
