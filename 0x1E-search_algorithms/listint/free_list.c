@@ -8,10 +8,11 @@
  */
 void free_list(listint_t *list)
 {
-	listint_t *node;
 
 	if (list)
 	{
+		listint_t *node;
+
 		node = list->next;
 		free(list);
 		free_list(node);
